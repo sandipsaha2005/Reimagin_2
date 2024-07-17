@@ -66,7 +66,7 @@ const Content = () => (
     ))}
     <div className="content content--highlight content--outro">
       <p className="text-large">Lost in perpetual dependency, inhabitants of the Synthetic Era found solace in cryptic simulations, where pain ebbed and cognitive loads momentarily lightened.</p>
-      <img className="content__img spacer" src="img/4.png" alt="Outro" />
+      {/* <img className="content__img spacer" src="img/4.png" alt="Outro" /> */}
     </div>
   </>
 );

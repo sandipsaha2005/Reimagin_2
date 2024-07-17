@@ -2,6 +2,8 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
+
 @font-face {
     font-family: "Panton";
     font-weight: 400;
@@ -130,5 +132,17 @@
     color: #f5f5f5;
     font-family: inherit;
     font-size: inherit;
+  }
+  @layer base {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    ::-webkit-scrollbar {
+        display: none !important;
+    }
+  
+    /* Hide scrollbar for IE, Edge and Firefox */
+    * {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
   }
   

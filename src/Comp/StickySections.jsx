@@ -17,7 +17,7 @@ const Sticky = () => {
 
     const initSmoothScrolling = () => {
       const lenis = new Lenis({
-        lerp: 0.2,
+        lerp: 0.03,
         smoothWheel: true,
       });
 
@@ -72,11 +72,11 @@ const Sticky = () => {
 
   return (
     <main>
-      <Header />
+      {/* <Header /> */}
       <div className="wrap">
         <Content />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 };
