@@ -6,6 +6,8 @@ import './App.css'
 import Hero from './organs/Hero'
 import JustCheck from './componets/JustCheck'
 import Sticky from './Comp/StickySections'
+import ScrollThreeD from './Comp/Scroll3Dgrid/Index'
+// import ScrollThreeD './Comp/'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -13,7 +15,8 @@ function App() {
     <>
       {/* <Hero/> */}
       {/* <JustCheck/> */}
-      <Sticky/>
+      {/* <Sticky/> */}
+      <ScrollThreeD/>
     </>
   )
 }
