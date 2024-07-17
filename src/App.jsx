@@ -30,10 +30,7 @@ console.log(seconds);
 
   return (
     <>
-      {isPreLoading ? <PreLoader /> : <AppToRender/>}
-        
-      {/* <VideoPlayer  url={OpenVideo} poster={'https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649'}/> */}
-    
+      {isPreLoading ? <PreLoader /> : <AppToRender/>}    
     </>
   )
 }
