@@ -7,12 +7,14 @@ import VideoPlayer from './VideoPlayer'
 import OpenVideo from '../../assets/video/PreLoadder.mp4'
 // import VideoJS from './VideoPlayer'
 import exampleGif from '../../assets/gif/d9oji4g-e98045e6-424f-40e6-bee0-42149b0ef1c0.gif'
+import OpeningSequence from '../TextOpen/OpeningSequence'
 const PreLoader = ({ onFinished }) => {
   const [step, setStep] = useState(0);
 
-  useEffect(() => {
-    if (step < 4) {
-      const timer = setTimeout(() => setStep(step + 1), 1000); // Show each text for 1 second
+const durations = [15000,5000]
+useEffect(() => {
+    if (step < durations.length) {
+      const timer = setTimeout(() => setStep(step + 1), durations[step]);
       return () => clearTimeout(timer);
     }
   }, [step]);
@@ -26,15 +28,8 @@ const PreLoader = ({ onFinished }) => {
 
   return (
     <div className="flex justify-center items-center h-screen flex-col bg-transparent text-white">
-      {step === 0 && <img 
-        src={exampleGif} 
-        alt="Example GIF" 
-        style={{ height: '100%', width: '100%', objectFit: 'cover' }}
-      />}
-      {step === 1 && <h1 className="text-4xl mb-4">First Text</h1>}
-      {step === 2 && <h1 className="text-4xl mb-4">Second Text</h1>}
-      {step === 3 && <h1 className="text-4xl mb-4">Third Text</h1>}
-      {step === 4 && (
+      {step === 0 && <OpeningSequence/>}
+      {step === 1 && (
        <VideoPlayer/>
       )}
     </div>

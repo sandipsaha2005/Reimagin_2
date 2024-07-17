@@ -7,8 +7,6 @@ const VideoPlayer = () => {
         style={{ height: '100%', width: '100%', objectFit: 'cover' }} 
         src={OpenVideo}
         autoPlay 
-        loop 
-        muted 
         playsInline 
       />
     </div>

@@ -23,9 +23,9 @@ body {
 	margin: 0;
 	color: var(--color-text);
 	background-color: var(--color-bg); 
-	font-family: "area-variable", sans-serif;
-	font-variation-settings: "slnt" 0, "wdth" 150, "wght" 500, "INKT" 0;
-	-webkit-font-smoothing: antialiased;
+	/* font-family: "area-variable", sans-serif; */
+	/* font-variation-settings: "slnt" 0, "wdth" 150, "wght" 500, "INKT" 0;
+	-webkit-font-smoothing: antialiased; */
 	-moz-osx-font-smoothing: grayscale;
 	width: 100%;
 	overflow-x: hidden;

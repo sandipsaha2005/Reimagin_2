@@ -3,10 +3,10 @@
 @import 'tailwindcss/utilities';
 
 @font-face {
-    font-family: "Panton";
-    font-weight: 400;
-    font-display: swap;
-    src: url("../assets/fonts/Panton-Trial-Regular.woff") format("woff");
+    font-family: "Steelar";
+    /* font-weight: 400;
+    font-display: swap; */
+    src: url("../assets/fonts/Steelar-j9Vnj.otf");
   }
   
   /* ////////////////////////////////////  Global  //////////////////////////////////// */
@@ -20,7 +20,7 @@
   }
   
   html {
-    font-family: "Panton", sans-serif;
+    font-family: "Steelar", sans-serif;
     font-display: block;
     font-size: max(0.9rem, 0.9vw);
     color: #f5f5f5;

@@ -72,11 +72,11 @@ const Sticky = () => {
 
   return (
     <main>
-      <Header />
+      {/* <Header /> */}
       <div className="wrap">
         <Content />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 };

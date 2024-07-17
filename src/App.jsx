@@ -16,17 +16,17 @@ function App() {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    if (seconds <10) {
+    if (seconds < 21) {
       const interval = setInterval(() => {
         setSeconds(prevSeconds => prevSeconds + 1);
       }, 1000);
-      if(seconds==8){
+      if(seconds==20){
         setIsPreLoading(false)
       }
       return () => clearInterval(interval);
     }
   }, [seconds]);
-console.log(seconds);
+// console.log(seconds);
 
   return (
     <>

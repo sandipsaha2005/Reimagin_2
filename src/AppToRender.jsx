@@ -21,6 +21,7 @@ function AppToRender() {
   return (
     <>
       <Sticky/>
+      <ScrollThreeD/>
     </>
   )
 }
