@@ -44,7 +44,7 @@ body {
     background-size: cover; Optional: Ensures the image covers the entire background  */
 	background-color: var(--color-bg);
 	font-family: "Orbitron", serif;
-	font-variation-settings: "ital" 0, "wght" 700;
+	font-variation-settings: "ital" 0, "wght" 600;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
