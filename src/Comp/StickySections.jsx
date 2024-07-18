@@ -17,7 +17,7 @@ const Sticky = () => {
 
     const initSmoothScrolling = () => {
       const lenis = new Lenis({
-        lerp: 0.2,
+        lerp: 0.5,
         smoothWheel: true,
       });
 
