@@ -10,18 +10,24 @@ import ScrollThreeD from './Comp/Scroll3Dgrid/Index'
 import PreLoader from './Comp/preLoader/Index'
 import VideoPlayer  from './Comp/preLoader/VideoPlayer'
 import OpenVideo from './assets/video/PreLoadder.mp4'
+import TrailDemo from './Comp/BasicTrail'
+import {IconCloudDemo} from './Comp/circulCloud'
+import { ScrollBasedVelocityDemo } from './Comp/textAnimation'
 // import ScrollThreeD './Comp/'
 function AppToRender() {
   const [count, setCount] = useState(0)
   const [isPreLoading, setIsPreLoading] = useState(true);
   const [seconds, setSeconds] = useState(0);
-
+  const [open, set] = useState(true);
 
 
   return (
     <>
-      <Sticky/>
-      <ScrollThreeD/>
+      {/* <Sticky/>
+      <ScrollThreeD/> */}
+      {/* <TrailDemo/> */}
+      {/* <IconCloudDemo/> */}
+      <ScrollBasedVelocityDemo/>
     </>
   )
 }
