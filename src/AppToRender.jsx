@@ -25,9 +25,9 @@ function AppToRender() {
   return (
     <>
       <Sticky/>
-      <MarqueeDemo/>
       <ScrollBasedVelocityDemo/>
       <ScrollThreeD/>
+      <MarqueeDemo/>
       {/* <TrailDemo/> */}
       {/* <IconCloudDemo/> */}
     </>

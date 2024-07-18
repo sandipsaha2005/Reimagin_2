@@ -462,8 +462,10 @@ const GridComponent = () => {
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
-          Command Your Hero's <br /> Dominate the Arena!
+          Command Your Hero's
         </h3>
+        <h3 className="content__title content__title--right text-[#FFCC00]">Dominate the Arena!</h3>
+        
       </section>
       <section className="content">
         <div className="grid grid--2">
@@ -492,8 +494,9 @@ const GridComponent = () => {
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
-        Team Up, Fight On <br /> Win Big! 
+        Team Up, Fight On Win Big! 
         </h3>
+        <h3></h3>
       </section>
       <section className="content content--spacing">
         <div className="grid grid--4">
@@ -506,8 +509,12 @@ const GridComponent = () => {
           ))}
           </div>
         </div>
-        <h3 className="content__title content__title--right content__title--top">
-        Forge Your Legacy <br /> in Every Battle! 
+        <h3 className="content__title content__title--right">
+        Forge Your Legacy
+        </h3>
+        <br />
+        <h3 className="content__title content__title--right pt-96 md:pt-60 text-[#FFCC00]">
+        in Every Battle! 
         </h3>
       </section>
       <section className="content content--spacing">
@@ -521,14 +528,22 @@ const GridComponent = () => {
           ))}
           </div>
         </div>
-        <h3 className="content__title content__title--right content__title--top">
-        The Ultimate <br /> Mobile Battle Experience! 
+        <h3 className="content__title content__title--right">
+        The Ultimate
+        </h3>
+        <br />
+        <h3 className="content__title content__title--right pt-96 md:pt-96 text-[#FFCC00]">
+        Mobile Battle Experience! 
         </h3>
       </section>
-      <section className="content content--spacing s-6">
+      {/* <section className="content content--spacing s-6">
         <div className="grid grid--6">
           <div className="grid-wrap">
+<<<<<<< HEAD
             {/* Add grid items here */}
+=======
+
+>>>>>>> 8ab6f9f59105acd38836ab4c353041f954a687ac
             {images6.map((image, index) => (
             <div className="grid__item" key={index}>
               <div className="grid__item-inner" style={{ backgroundImage: `url(${image})` }}></div>
@@ -539,7 +554,11 @@ const GridComponent = () => {
         <h3 className="content__title content__title--right content__title--top">
         Epic Battles  <br /> in the Palm of Your Hand!
         </h3>
+<<<<<<< HEAD
       </section>
+=======
+      </section> */}
+>>>>>>> 8ab6f9f59105acd38836ab4c353041f954a687ac
     </main>
   );
 };
