@@ -1,6 +1,6 @@
 import React from 'react'
 import { useGLTF, Stage, PresentationControls } from '@react-three/drei'
-import { Canvas } from 'react-three-fiber'
+import { Canvas } from '@react-three/fiber'
 import model from '../assets/models/bmw_m4_competition_m_package.glb'
 function Model(params) {
     const { scene }= useGLTF(model)
