@@ -5,6 +5,10 @@
 
   
   /* ////////////////////////////////////  Global  //////////////////////////////////// */
+  @font-face {
+    font-family: 'Steelar';
+    src: url('./assets/fonts/Steelar-j9Vnj.otf');
+  }
   *{
     font-family: 'Orbitron', Courier, monospace;
   }
