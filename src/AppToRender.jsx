@@ -13,6 +13,7 @@ import OpenVideo from './assets/video/PreLoadder.mp4'
 import TrailDemo from './Comp/BasicTrail'
 import {IconCloudDemo} from './Comp/circulCloud'
 import { ScrollBasedVelocityDemo } from './Comp/textAnimation'
+import { MarqueeDemo } from './Comp/Marquee/app'
 // import ScrollThreeD './Comp/'
 function AppToRender() {
   const [count, setCount] = useState(0)
@@ -24,10 +25,11 @@ function AppToRender() {
   return (
     <>
       <Sticky/>
-      {/* <ScrollThreeD/>
-      <TrailDemo/>
-      <IconCloudDemo/>
-      <ScrollBasedVelocityDemo/> */}
+      <MarqueeDemo/>
+      <ScrollBasedVelocityDemo/>
+      <ScrollThreeD/>
+      {/* <TrailDemo/> */}
+      {/* <IconCloudDemo/> */}
     </>
   )
 }

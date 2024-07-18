@@ -30,7 +30,7 @@ export default function TrailDemo() {
         set(!open)
     }
     return (// adjus the height whoami
-      <div className={styles.container} style={{border:'4px solid white',height:'400px'}} onClick={handleChange}>
+      <div className={styles.container} style={{height:'400px'}} onClick={handleChange}>
         <Trail open={open}>
           <span>Lorem</span>
           <span>Ipsum</span>

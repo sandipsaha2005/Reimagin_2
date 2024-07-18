@@ -440,7 +440,7 @@ const GridComponent = () => {
     <main>
       <div className="intro">
         <h1 className="intro__title">
-          <span className="intro__title-pre">UNLEASH THE ACTION</span>
+          <span className="intro__title-pre text-[#FFCC00] mb-5">UNLEASH THE ACTION</span>
           <span className="intro__title-sub">Epic Mobile Legends</span>
         </h1>
         <span className="intro__info">
@@ -477,7 +477,7 @@ const GridComponent = () => {
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
-          Command Your Hero's <br /> Dominate the Arena!
+        Join the Fight <br /> Lead Your Team!
         </h3>
       </section>
       <section className="content content--spacing">
@@ -492,7 +492,7 @@ const GridComponent = () => {
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
-          Command Your Hero's <br /> Dominate the Arena!
+        Team Up, Fight On <br /> Win Big! 
         </h3>
       </section>
       <section className="content content--spacing">
@@ -507,7 +507,7 @@ const GridComponent = () => {
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
-          Command Your Hero's <br /> Dominate the Arena!
+        Forge Your Legacy <br /> in Every Battle! 
         </h3>
       </section>
       <section className="content content--spacing">
@@ -522,7 +522,7 @@ const GridComponent = () => {
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
-          Command Your Hero's <br /> Dominate the Arena!
+        The Ultimate <br /> Mobile Battle Experience! 
         </h3>
       </section>
       <section className="content content--spacing s-6">
@@ -537,7 +537,7 @@ const GridComponent = () => {
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
-          Command Your Hero's <br /> Dominate the Arena!
+        Epic Battles  <br /> in the Palm of Your Hand!
         </h3>
       </section>
     </main>
