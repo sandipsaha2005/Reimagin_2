@@ -13,6 +13,9 @@ import OpenVideo from './assets/video/PreLoadder.mp4'
 import TrailDemo from './Comp/BasicTrail'
 import {IconCloudDemo} from './Comp/circulCloud'
 import { ScrollBasedVelocityDemo } from './Comp/textAnimation'
+import CirclesAnimation from './Comp/JellyFish'
+import {GlobeDemo} from './Comp/Earth/Ui'
+import Loader from './Comp/CirculNavbar'
 // import ScrollThreeD './Comp/'
 function AppToRender() {
   const [count, setCount] = useState(0)
@@ -27,7 +30,10 @@ function AppToRender() {
       <ScrollThreeD/> */}
       {/* <TrailDemo/> */}
       {/* <IconCloudDemo/> */}
-      <ScrollBasedVelocityDemo/>
+      {/* <ScrollBasedVelocityDemo/> */}
+      {/* <CirclesAnimation/> */}
+      {/* <GlobeDemo/> */}
+      <Loader/>
     </>
   )
 }

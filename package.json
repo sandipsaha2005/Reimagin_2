@@ -30,6 +30,7 @@
     "react-three-fiber": "^6.0.13",
     "screenfull": "^6.0.2",
     "tailwind-merge": "^2.4.0",
+    "three-globe": "^2.31.1",
     "video.js": "^8.16.1",
     "zustand": "^4.5.4"
   },
