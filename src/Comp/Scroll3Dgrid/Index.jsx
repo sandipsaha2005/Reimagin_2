@@ -4,6 +4,82 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 import "./App.css";
+import one from './img/1.jpg';
+import two from './img/2.jpg';
+import three from './img/3.jpg';
+import four from './img/4.jpg';
+import five from './img/5.jpg';
+import six from './img/6.jpg';
+// import seven from './img/7.jpg';
+import eight from './img/8.jpg';
+import nine from './img/9.jpg';
+import ten from './img/10.jpg';
+import eleven from './img/11.jpg';
+import twelve from './img/12.jpg';
+import thirteen from './img/13.jpg';
+import fourteen from './img/14.jpg';
+import fifteen from './img/15.jpg';
+import sixteen from './img/16.jpg';
+import seventeen from './img/17.jpg';
+import eighteen from './img/18.jpg';
+import nineteen from './img/19.jpg';
+import twenty from './img/20.jpg';
+import twentyOne from './img/21.jpg';
+import twentyTwo from './img/22.jpg';
+import twentyThree from './img/23.jpg';
+import twentyFour from './img/24.jpg';
+import twentyFive from './img/25.jpg';
+import twentySix from './img/26.jpg';
+import twentySeven from './img/27.jpg';
+import twentyEight from './img/28.jpg';
+import twentyNine from './img/29.jpg';
+import thirty from './img/30.jpg';
+import thirtyOne from './img/31.jpg';
+import thirtyTwo from './img/32.jpg';
+import thirtyThree from './img/33.jpg';
+import thirtyFour from './img/34.jpg';
+import thirtyFive from './img/35.jpg';
+import thirtySix from './img/36.jpg';
+import thirtySeven from './img/37.jpg';
+import thirtyEight from './img/38.jpg';
+import thirtyNine from './img/39.jpg';
+import forty from './img/40.jpg';
+import fortyOne from './img/41.jpg';
+import fortyTwo from './img/42.jpg';
+import fortyThree from './img/43.jpg';
+import fortyFour from './img/44.jpg';
+import fortyFive from './img/45.jpg';
+import fortySix from './img/46.jpg';
+import fortySeven from './img/47.jpg';
+import fortyEight from './img/48.jpg';
+import fortyNine from './img/49.jpg';
+import fifty from './img/50.jpg';
+import fiftyOne from './img/51.jpg';
+import fiftyTwo from './img/52.jpg';
+import fiftyThree from './img/53.jpg';
+import fiftyFour from './img/54.jpg';
+import fiftyFive from './img/55.jpg';
+import fiftySix from './img/56.jpg';
+import fiftySeven from './img/57.jpg';
+import fiftyEight from './img/58.jpg';
+import fiftyNine from './img/59.jpg';
+import sixty from './img/60.jpg';
+import sixtyOne from './img/61.jpg';
+import sixtyTwo from './img/62.jpg';
+import sixtyThree from './img/63.jpg';
+import sixtyFour from './img/64.jpg';
+import sixtyFive from './img/65.jpg';
+import sixtySix from './img/66.jpg';
+import sixtySeven from './img/67.jpg';
+import sixtyEight from './img/68.jpg';
+import sixtyNine from './img/69.jpg';
+import seventy from './img/70.jpg';
+import seventyOne from './img/71.jpg';
+import seventyTwo from './img/72.jpg';
+import seventyThree from './img/73.jpg';
+import seventyFour from './img/74.jpg';
+import seventyFive from './img/75.jpg';
+
 
 const GridComponent = () => {
   useEffect(() => {
@@ -33,6 +109,8 @@ const GridComponent = () => {
       const gridItemsInner = [...gridItems].map((item) =>
         item.querySelector(".grid__item-inner")
       );
+
+     
 
       const timeline = gsap.timeline({
         defaults: { ease: "none" },
@@ -317,6 +395,46 @@ const GridComponent = () => {
       document.body.classList.remove("loading");
     });
   }, []);
+  
+  const images1 = [
+    one, two, three, four, five, six, eight, nine, ten,
+    eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty,
+    twentyOne, twentyTwo, twentyThree, twentyFour, twentyFive, twentySix, twentySeven, twentyEight, twentyNine, thirty,
+    thirtyOne, thirtyTwo, thirtyThree, thirtyFour, thirtyFive, thirtySix, thirtySeven, thirtyEight, thirtyNine, forty,
+    
+  ];
+  const images2 = [
+    fortyOne, fortyTwo, fortyThree, fortyFour, fortyFive, fortySix, fortySeven, fortyEight, fortyNine, fifty,
+    fiftyOne, fiftyTwo, fiftyThree, fiftyFour, fiftyFive, fiftySix, fiftySeven, fiftyEight, fiftyNine, sixty,
+    sixtyOne, sixtyTwo, sixtyThree, sixtyFour, sixtyFive, sixtySix, sixtySeven, sixtyEight, sixtyNine,seventy,
+    seventyOne,seventyTwo,seventyThree,seventyFour,seventyFive
+  ];
+  const images3 = [
+    one, two, three, four, five, six, eight, nine, ten,
+    eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty,
+    twentyOne, twentyTwo, twentyThree, twentyFour, twentyFive, twentySix, twentySeven, twentyEight, twentyNine, thirty,
+    thirtyOne, thirtyTwo, thirtyThree, thirtyFour, thirtyFive, thirtySix, thirtySeven, thirtyEight, thirtyNine, forty,
+    
+  ];
+  const images4 = [
+    one, two, three,  twentyNine, thirty,
+    thirtyOne, thirtyTwo, thirtyThree, thirtyFour, thirtyFive, thirtySix, thirtySeven, thirtyEight, thirtyNine, forty,
+    fortyOne, fortyTwo, fortyThree, sixtySeven, sixtyEight, sixtyNine,seventy,
+    seventyOne,seventyTwo,seventyThree,seventyFour,seventyFive
+  ];
+  const images5 = [
+    one, two, three, four, five, six, eight, nine, ten,
+    eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty,
+    twentyOne, twentyTwo, twentyThree, twentyFour, twentyFive, twentySix, twentySeven, twentyEight, twentyNine, thirty,
+    thirtyOne, fiftyNine, sixty,
+    sixtyOne, sixtyTwo, sixtyThree, sixtyFour, sixtyFive, sixtySix, sixtySeven, sixtyEight, sixtyNine,seventy,
+    seventyOne,seventyTwo,seventyThree,seventyFour,seventyFive
+  ];
+  const images6 = [
+    one, two, three, four, five, six, eight, nine, ten,
+    eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty,
+    seventyOne,seventyTwo,seventyThree,seventyFour,seventyFive
+  ];
 
   return (
     <main>
@@ -334,204 +452,13 @@ const GridComponent = () => {
         <div className="grid grid--1">
           <div className="grid-wrap">
             {/* Add grid items here */}
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
+            {images1.map((image, index) => (
+            <div className="grid__item" key={index}>
+              <div className="grid__item-inner" style={{ backgroundImage: `url(${image})` }}></div>
             </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            {/* <div className="grid__item"><div className="grid__item-inner" style={{ backgroundImage: 'url(img/2.jpg)' }}></div></div>
-            <div className="grid__item"><div className="grid__item-inner" style={{ backgroundImage: 'url(./img/3.jpg)' }}></div></div>
-            <div className="grid__item"><div className="grid__item-inner" style={{ backgroundImage: 'url(./img/4.jpg)' }}></div></div>
-            <div className="grid__item"><div className="grid__item-inner" style={{ backgroundImage: 'url(./img/5.jpg)' }}></div></div>
-            <div className="grid__item"><div className="grid__item-inner" style={{ backgroundImage: 'url(./img/6.jpg)' }}></div></div>
-            <div className="grid__item"><div className="grid__item-inner" style={{ backgroundImage: 'url(./img/7.jpg)' }}></div></div>
-            <div className="grid__item"><div className="grid__item-inner" style={{ backgroundImage: 'url(./img/8.jpg)' }}></div></div>
-            <div className="grid__item"><div className="grid__item-inner" style={{ backgroundImage: 'url(./img/65.jpg)' }}></div></div>
-            <div className="grid__item"><div className="grid__item-inner" style={{ backgroundImage: 'url(./img/10.jpg)' }}></div></div> */}
+          ))}
+
+
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
@@ -542,267 +469,11 @@ const GridComponent = () => {
         <div className="grid grid--2">
           <div className="grid-wrap">
             {/* Add grid items here */}
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
+            {images2.map((image, index) => (
+            <div className="grid__item" key={index}>
+              <div className="grid__item-inner" style={{ backgroundImage: `url(${image})` }}></div>
             </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
+          ))}
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
@@ -813,267 +484,11 @@ const GridComponent = () => {
         <div className="grid grid--3">
           <div className="grid-wrap">
             {/* Add grid items here */}
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
+            {images3.map((image, index) => (
+            <div className="grid__item" key={index}>
+              <div className="grid__item-inner" style={{ backgroundImage: `url(${image})` }}></div>
             </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
+          ))}
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
@@ -1084,267 +499,11 @@ const GridComponent = () => {
         <div className="grid grid--4">
           <div className="grid-wrap">
             {/* Add grid items here */}
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
+            {images4.map((image, index) => (
+            <div className="grid__item" key={index}>
+              <div className="grid__item-inner" style={{ backgroundImage: `url(${image})` }}></div>
             </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
+          ))}
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
@@ -1355,267 +514,11 @@ const GridComponent = () => {
         <div className="grid grid--5">
           <div className="grid-wrap">
             {/* Add grid items here */}
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
+            {images5.map((image, index) => (
+            <div className="grid__item" key={index}>
+              <div className="grid__item-inner" style={{ backgroundImage: `url(${image})` }}></div>
             </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
+          ))}
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
@@ -1626,267 +529,11 @@ const GridComponent = () => {
         <div className="grid grid--6">
           <div className="grid-wrap">
             {/* Add grid items here */}
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
+            {images6.map((image, index) => (
+            <div className="grid__item" key={index}>
+              <div className="grid__item-inner" style={{ backgroundImage: `url(${image})` }}></div>
             </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
-            <div className="grid__item">
-              <div
-                className="grid__item-inner"
-                style={{
-                  backgroundImage:
-                    "url(https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649)",
-                }}
-              ></div>
-            </div>
+          ))}
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
