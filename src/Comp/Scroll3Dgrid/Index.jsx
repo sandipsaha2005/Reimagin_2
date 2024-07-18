@@ -397,7 +397,7 @@ const GridComponent = () => {
   }, []);
   
   const images1 = [
-    one, two, three, four, five, six, eight, nine, ten,
+    one, two, three, four, five, six, eight, ten,
     eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty,
     twentyOne, twentyTwo, twentyThree, twentyFour, twentyFive, twentySix, twentySeven, twentyEight, twentyNine, thirty,
     thirtyOne, thirtyTwo, thirtyThree, thirtyFour, thirtyFive, thirtySix, thirtySeven, thirtyEight, thirtyNine, forty,
@@ -468,17 +468,17 @@ const GridComponent = () => {
       <section className="content">
         <div className="grid grid--2">
           <div className="grid-wrap">
-            {/* Add grid items here */}
+            {/* 
             {images2.map((image, index) => (
             <div className="grid__item" key={index}>
               <div className="grid__item-inner" style={{ backgroundImage: `url(${image})` }}></div>
             </div>
-          ))}
+          ))} */}
           </div>
         </div>
-        <h3 className="content__title content__title--right content__title--top">
+        {/* <h3 className="content__title content__title--right content__title--top">
         Join the Fight <br /> Lead Your Team!
-        </h3>
+        </h3> */}
       </section>
       <section className="content content--spacing">
         <div className="grid grid--3">
@@ -529,16 +529,16 @@ const GridComponent = () => {
         <div className="grid grid--6">
           <div className="grid-wrap">
             {/* Add grid items here */}
-            {images6.map((image, index) => (
+            {/* {images6.map((image, index) => (
             <div className="grid__item" key={index}>
               <div className="grid__item-inner" style={{ backgroundImage: `url(${image})` }}></div>
             </div>
-          ))}
+          ))} */}
           </div>
         </div>
-        <h3 className="content__title content__title--right content__title--top">
+        {/* <h3 className="content__title content__title--right content__title--top">
         Epic Battles  <br /> in the Palm of Your Hand!
-        </h3>
+        </h3> */}
       </section>
     </main>
   );
