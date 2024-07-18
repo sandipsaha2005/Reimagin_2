@@ -539,11 +539,6 @@ const GridComponent = () => {
       {/* <section className="content content--spacing s-6">
         <div className="grid grid--6">
           <div className="grid-wrap">
-<<<<<<< HEAD
-            {/* Add grid items here */}
-=======
-
->>>>>>> 8ab6f9f59105acd38836ab4c353041f954a687ac
             {images6.map((image, index) => (
             <div className="grid__item" key={index}>
               <div className="grid__item-inner" style={{ backgroundImage: `url(${image})` }}></div>
@@ -554,11 +549,7 @@ const GridComponent = () => {
         <h3 className="content__title content__title--right content__title--top">
         Epic Battles  <br /> in the Palm of Your Hand!
         </h3>
-<<<<<<< HEAD
-      </section>
-=======
       </section> */}
->>>>>>> 8ab6f9f59105acd38836ab4c353041f954a687ac
     </main>
   );
 };
