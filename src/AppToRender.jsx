@@ -5,7 +5,7 @@ import viteLogo from '/vite.svg'
 // import HorizontalParallax from './componets/HorizontalParallax'
 import Hero from './organs/Hero'
 import JustCheck from './componets/JustCheck'
-import Sticky from './Comp/StickySections'
+import Sticky from './Comp/StickySection/StickySections'
 import ScrollThreeD from './Comp/Scroll3Dgrid/Index'
 import PreLoader from './Comp/preLoader/Index'
 import VideoPlayer  from './Comp/preLoader/VideoPlayer'
@@ -23,11 +23,11 @@ function AppToRender() {
 
   return (
     <>
-      {/* <Sticky/>
-      <ScrollThreeD/> */}
-      {/* <TrailDemo/> */}
-      {/* <IconCloudDemo/> */}
-      <ScrollBasedVelocityDemo/>
+      <Sticky/>
+      {/* <ScrollThreeD/>
+      <TrailDemo/>
+      <IconCloudDemo/>
+      <ScrollBasedVelocityDemo/> */}
     </>
   )
 }

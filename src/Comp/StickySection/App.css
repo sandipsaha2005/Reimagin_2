@@ -11,12 +11,11 @@
 	--color-bg: #12100e;
 	--color-link: rgba(255,255,255,0.6);
 	--color-link-hover: #fff;
-	--color-bg-1: #2f251e;
-	--color-bg-2: #43392f;
+	--color-bg-1: url('https://motionbgs.com/media/4040/yin-martial-genius.960x540.mp4') ;
+	--color-bg-2: #082751;
 	--color-bg-3: var(--color-bg-1);
 	--color-bg-4: var(--color-bg-2);
-	--color-bg-5: var(--color-bg-1);
-	--color-bg-6: var(--color-bg-2);
+	
 }
 
 body {
@@ -31,42 +30,6 @@ body {
 	overflow-x: hidden;
 }
 
-.demo-2, 
-.demo-4,
-.demo-6,
-.demo-8,
-.demo-10,
-.demo-12,
-.demo-14 {
-	--color-text: #000;
-	--color-bg: #e1e1e1;
-	--color-link: rgba(0,0,0,0.6);
-	--color-link-hover: #000;
-	--color-bg-1: #9d9d9d;
-	--color-bg-2: #c7c7c7;
-	--color-bg-3: var(--color-bg-1);
-	--color-bg-4: var(--color-bg-2);
-	--color-bg-5: var(--color-bg-1);
-	--color-bg-6: var(--color-bg-2);
-}
-
-.demo-9 {
-	--color-bg-1: #2f251e;
-	--color-bg-2: #43392f;
-	--color-bg-3: #18130e;
-	--color-bg-4: var(--color-bg-1);
-	--color-bg-5: var(--color-bg-2);
-	--color-bg-6: var(--color-bg-3);
-}
-
-.demo-10 {
-	--color-bg-1: #9d9d9d;
-	--color-bg-2: #c7c7c7;
-	--color-bg-3: #7c7c7c;
-	--color-bg-4: var(--color-bg-1);
-	--color-bg-5: var(--color-bg-2);
-	--color-bg-6: var(--color-bg-3);
-}
 
 /* Page Loader */
 .js .loading::before,
@@ -185,27 +148,27 @@ a:focus-visible {
   pointer-events: auto;
 }
 
-.frame__title {
+.frame_title {
   grid-area: title;
   font-size: inherit;
   margin: 0;
 }
 
-.frame__back {
+.frame_back {
   grid-area: back;
   justify-self: start;
 }
 
-.frame__prev {
+.frame_prev {
   grid-area: prev;
   justify-self: start;
 }
 
-.frame__sub {
+.frame_sub {
   grid-area: sub;
 }
 
-.frame__demos {
+.frame_demos {
 	grid-area: demos;
 	display: flex;
 	align-items: center;
@@ -218,7 +181,7 @@ a:focus-visible {
 	border-radius: 10px;
 }
 
-.frame__demos > * {
+.frame_demos > * {
 	width: 2rem;
 	display: block;
 	flex: none;
@@ -232,15 +195,15 @@ a:focus-visible {
 	background: var(--color-bg);
 }
 
-.frame__demos > span {
+.frame_demos > span {
 	filter: invert(100%);
 }
 
-.frame__demos::before {
+.frame_demos::before {
 	content: "Variations:";
 }
 
-.frame__heading {
+.frame_heading {
 	grid-area: heading;
 	align-self: center;
 	justify-self: start;
@@ -250,7 +213,7 @@ a:focus-visible {
 	margin-top: 10vh;
 }
 
-.frame__heading h2 {
+.frame_heading h2 {
 	margin: 0;
 	line-height: 0.9;
 	text-transform: uppercase;
@@ -265,15 +228,15 @@ i {
 	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 400;
 }
 
-.frame__heading p {
+.frame_heading p {
 		margin: 0;
 }
 
-.frame__credits {
+.frame_credits {
 	grid-area: credits;
 }
 
-.frame__author {
+.frame_author {
 	display: flex;
 	gap: 1.5rem;
 	grid-area: author;
@@ -297,7 +260,7 @@ i {
 	max-width: 900px;
 	margin: 0 0 0.85em 0;
 	line-height: 1.2;
-	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500, "INKT" 100;
+	font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400, "INKT" 100;
 }
 
 .content--sticky {
@@ -310,7 +273,7 @@ i {
 }
 
 .content--grid,
-.content--grid .content__inner {
+.content--grid .content_inner {
 	display: grid;
 	overflow: hidden;
 	grid-column-gap: 5vw;
@@ -320,12 +283,12 @@ i {
 	justify-items: center;
 }
 
-.content--grid:has(.content__inner) {
+.content--grid:has(.content_inner) {
 	display: block;
 	padding: 0;
 }
 
-.content__inner {
+.content_inner {
 	width: 100%;
 	height: 100%;
 	border-radius: 0 0 2rem 2rem;
@@ -346,11 +309,11 @@ i {
 	margin-bottom: 5vh;
 }
 
-.content--card .content__title {
+.content--card .content_title {
 	font-size: clamp(1.5rem,4vw,3.5rem);
 }
 
-.content--card .content__title i {
+.content--card .content_title i {
 	display: block;
 }
 
@@ -365,19 +328,19 @@ i {
 	margin-left: auto;
 }
 
-.content__img {
+.content_img {
 	grid-area: content-img;
 	width: 50%;
 	max-width: 300px;
 	height: auto;
 }
 
-.content__img--large {
+.content_img--large {
 	width: 60%;
 	height: auto;
 }
 
-.content__img--small {
+.content_img--small {
 	height: 35%;
 	width: auto;
 }
@@ -386,19 +349,16 @@ i {
 	margin-top: 20vh;
 }
 
-.content__title {
-	grid-area: content-title;
-	letter-spacing: -0.095em;
-	text-transform: uppercase;
-	line-height: 1;
-	font-weight: normal;
-	font-size: clamp(2rem,6vw,5rem);
-	margin: 0;
-	font-variation-settings: "slnt" 0, "wdth" 400, "wght" 900, "INKT" 400;
+.content_title {
+    grid-area: content-title;
+    text-transform: uppercase;
+	font-size: 6vw;
+    font-variation-settings: "slnt" 0, "wdth" 200, "wght" 400;
 }
 
-.content__text {
-	margin: 0;
+.content_text {
+	margin-top: 8vh;
+	margin-left: 15vh;
 	max-width: 500px;
 	grid-area: content-text;
 	text-align: center;
@@ -407,7 +367,7 @@ i {
 	backface-visibility: hidden;
 }
 
-.content__text--narrow {
+.content_text--narrow {
 	max-width: 300px;
 }
 
@@ -440,19 +400,19 @@ i {
 		align-content: space-between;
 		grid-template-areas: 'title back prev sub sponsor' 'heading heading heading heading heading' 'demos demos demos demos demos';
 	}
-	.frame__heading {
+	.frame_heading {
 		margin-top: 0;
 	}
-	.frame__heading h2 {
+	.frame_heading h2 {
 		white-space: nowrap;
 	}
-	.frame__heading p {
+	.frame_heading p {
 		margin: 0 0 0 auto;
 	}
-	.content--grid .content__title {
+	.content--grid .content_title {
 		align-self: end;
 	}
-	.frame__demos {
+	.frame_demos {
 		position: fixed;
 		bottom: 2rem;
 	}
@@ -462,7 +422,7 @@ i {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto 6rem;
 	}
-	.frame__author {
+	.frame_author {
 		align-self: center;
 	}
 	.frame #cdawrap {
@@ -470,23 +430,23 @@ i {
 		text-align: right;
 	}
 	.frame #cdawrap, 
-	.frame__author,
-	.frame__sub {
+	.frame_author,
+	.frame_sub {
 		justify-self: end;
 	}
 	.content--grid,
-	.content--grid .content__inner {
+	.content--grid .content_inner {
 		grid-template-areas: 'content-img content-title' 'content-img content-text';
 		grid-template-columns: 30% 1fr;
 		justify-items: start;
 	}
-	.content__img--large {
+	.content_img--large {
 		width: 160%;
 	}
-	.content__img--left {
+	.content_img--left {
 		justify-self: end;
 	}
-	.content__text--left {
+	.content_text--left {
 		text-align: left;
 		align-self: start;
 	}
