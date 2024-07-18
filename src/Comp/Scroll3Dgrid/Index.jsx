@@ -471,16 +471,16 @@ const GridComponent = () => {
         <div className="grid grid--2">
           <div className="grid-wrap">
             {/* Add grid items here */}
-            {images2.map((image, index) => (
+            {/* {images2.map((image, index) => (
             <div className="grid__item" key={index}>
               <div className="grid__item-inner" style={{ backgroundImage: `url(${image})` }}></div>
             </div>
-          ))}
+          ))} */}
           </div>
         </div>
-        <h3 className="content__title content__title--right content__title--top">
+        {/* <h3 className="content__title content__title--right content__title--top">
         Join the Fight <br /> Lead Your Team!
-        </h3>
+        </h3> */}
       </section>
       <section className="content content--spacing">
         <div className="grid grid--3">
@@ -509,11 +509,11 @@ const GridComponent = () => {
           ))}
           </div>
         </div>
-        <h3 className="content__title content__title--right">
+        <h3 className="content__title content__title--right  text-[#FFCC00]">
         Forge Your Legacy
         </h3>
         <br />
-        <h3 className="content__title content__title--right pt-96 md:pt-60 text-[#FFCC00]">
+        <h3 className="content__title content__title--right pt-96 md:pt-60">
         in Every Battle! 
         </h3>
       </section>
