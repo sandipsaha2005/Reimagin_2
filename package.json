@@ -18,10 +18,11 @@
     "@studio-freight/lenis": "^1.0.42",
     "clsx": "^2.1.1",
     "d3-ease": "^3.0.1",
-    "framer-motion": "^11.3.6",
+    "framer-motion": "^11.3.8",
     "gsap": "^3.12.5",
     "imagesloaded": "^5.0.0",
     "lenis": "^1.1.6",
+    "next-images": "^1.8.5",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -32,6 +33,7 @@
     "tailwind-merge": "^2.4.0",
     "three-globe": "^2.31.1",
     "video.js": "^8.16.1",
+    "webfont": "^6.0.2",
     "zustand": "^4.5.4"
   },
   "devDependencies": {
