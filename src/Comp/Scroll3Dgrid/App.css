@@ -235,14 +235,28 @@ body #cdawrap {
 }
 
 .intro__title-pre {
-	font-weight: 300;
-    font-size: clamp(2rem,8vw,5rem);
+    font-weight: 300;
+    font-size: clamp(2rem, 8vw, 4rem);
     color: var(--color-title);
     text-transform: uppercase;
+	border: #907030 2px;
+    text-shadow: 
+        0 0 5px var(--color-title),
+        0 0 10px var(--color-title),
+        0 0 20px var(--color-title),
+        0 0 40px var(--color-title),
+        0 0 80px var(--color-title),
+        0 0 90px var(--color-title),
+        0 0 100px var(--color-title),
+        0 0 120px var(--color-title),
+        0 0 140px var(--color-title);
+
+        
 }
 
+
 .intro__title-sub {
-    font-size: clamp(1.5rem,20vw,8rem);
+    font-size: clamp(1.5rem,20vw,6.5rem);
     max-width: 15ch;
     margin: 0 auto;
 }

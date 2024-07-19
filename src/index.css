@@ -12,6 +12,19 @@
   *{
     font-family: 'Orbitron', Courier, monospace;
   }
+  ::selection{
+    color: #FFCC00;
+    /* text-shadow: 
+    0 0 5px var(--color-title),
+    0 0 10px var(--color-title),
+    0 0 20px var(--color-title),
+    0 0 40px var(--color-title),
+    0 0 80px var(--color-title),
+    0 0 90px var(--color-title),
+    0 0 100px var(--color-title),
+    0 0 120px var(--color-title),
+    0 0 140px var(--color-title); */
+  }
   *,
   *::after,
   *::before {

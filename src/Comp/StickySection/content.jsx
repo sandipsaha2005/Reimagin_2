@@ -31,8 +31,9 @@ const contentData = [
 
 const Content = () => (
   <>
-    <div className="content content--highlight content--intro text-green-700">
+    <div className="content content--highlight content--intro text-yellow-500">
       <p className="text-large">As data conglomerates reveled in the opulence of cognitive wealth, a silent underclass manifested, condemned to the digital periphery.</p>
+
     </div>
     {contentData.map((item, index) => (
       <div key={index} className={`content content--sticky content--grid  blur-1 ${item.bgClass}`}>

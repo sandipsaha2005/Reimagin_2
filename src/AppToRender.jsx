@@ -13,11 +13,8 @@ import OpenVideo from './assets/video/PreLoadder.mp4'
 import TrailDemo from './Comp/BasicTrail'
 import {IconCloudDemo} from './Comp/circulCloud'
 import { ScrollBasedVelocityDemo } from './Comp/textAnimation'
-import CirclesAnimation from './Comp/JellyFish'
-import {GlobeDemo} from './Comp/Earth/Ui'
-import Loader from './Comp/CirculNavbar'
-import Background from './componets/Background'
-import Scene from './componets/Scene'
+import { MarqueeDemo } from './Comp/Marquee/app'
+import { ShineBorderDemo } from './Comp/ShineBorder/ShineBorder'
 // import ScrollThreeD './Comp/'
 function AppToRender() {
   const [count, setCount] = useState(0)
@@ -28,12 +25,13 @@ function AppToRender() {
 
   return (
     <>
+      {/* <ShineBorderDemo/> */}
       {/* <Sticky/> */}
-      {/* <ScrollThreeD/>
-      <TrailDemo/>
-      <IconCloudDemo/>
-      <ScrollBasedVelocityDemo/> */}
-      <Scene/>
+      <ScrollBasedVelocityDemo/>
+      {/* <ScrollThreeD/> */}
+      <MarqueeDemo/>
+      {/* <TrailDemo/> */}
+      {/* <IconCloudDemo/> */}
     </>
   )
 }
