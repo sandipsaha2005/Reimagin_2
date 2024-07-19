@@ -16,6 +16,8 @@ import { ScrollBasedVelocityDemo } from './Comp/textAnimation'
 import CirclesAnimation from './Comp/JellyFish'
 import {GlobeDemo} from './Comp/Earth/Ui'
 import Loader from './Comp/CirculNavbar'
+import Background from './componets/Background'
+import Scene from './componets/Scene'
 // import ScrollThreeD './Comp/'
 function AppToRender() {
   const [count, setCount] = useState(0)
@@ -26,11 +28,12 @@ function AppToRender() {
 
   return (
     <>
-      <Sticky/>
+      {/* <Sticky/> */}
       {/* <ScrollThreeD/>
       <TrailDemo/>
       <IconCloudDemo/>
       <ScrollBasedVelocityDemo/> */}
+      <Scene/>
     </>
   )
 }
