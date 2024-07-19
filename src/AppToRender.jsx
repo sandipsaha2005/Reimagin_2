@@ -14,6 +14,7 @@ import TrailDemo from './Comp/BasicTrail'
 import {IconCloudDemo} from './Comp/circulCloud'
 import { ScrollBasedVelocityDemo } from './Comp/textAnimation'
 import { MarqueeDemo } from './Comp/Marquee/app'
+import { ShineBorderDemo } from './Comp/ShineBorder/ShineBorder'
 // import ScrollThreeD './Comp/'
 function AppToRender() {
   const [count, setCount] = useState(0)
@@ -24,9 +25,10 @@ function AppToRender() {
 
   return (
     <>
-      <Sticky/>
+      {/* <ShineBorderDemo/> */}
+      {/* <Sticky/> */}
       <ScrollBasedVelocityDemo/>
-      <ScrollThreeD/>
+      {/* <ScrollThreeD/> */}
       <MarqueeDemo/>
       {/* <TrailDemo/> */}
       {/* <IconCloudDemo/> */}
