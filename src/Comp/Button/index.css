@@ -9,7 +9,7 @@ a { text-decoration: none; }
 
 .download {
 	position: absolute;
-	top: calc(50% - 30px);
+	/* top: calc(50% - 30px); */
 	right: calc(50% - 115px);
 	width: 230px;
 	height: 60px;
@@ -45,11 +45,11 @@ a { text-decoration: none; }
 }
 .download:after {
 	content: 'Click to select a platform';
-	top: -60px;
+	top: 100px;
 	opacity: 0;
 }
 .download:hover:after {
-	top: 0px;
+	top: 100px;
 	opacity: 1;
 }
 .download:hover:before {
@@ -59,7 +59,8 @@ a { text-decoration: none; }
 
 .platforms {
 	position: absolute;
-	top: calc(50% - 100px);
+	top: calc(90% - 10px);
+	/* top: 10%; */
 	left: calc(50% - 290px);
 	height: 200px;
 	width: 580px;

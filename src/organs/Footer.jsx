@@ -21,7 +21,7 @@ function Footer() {
         Get Started
       </a> */}
      {/* <ButtonNEw/> */}
-      
+     <ButtonNEw/>
     </div>
 
     <div

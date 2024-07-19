@@ -3,7 +3,7 @@ import './index.css'
 function ButtonNEw() {
 
   return (
-    <>
+    <div className="block">
       <a class="download" href="#platforms"></a>
       <div class="platforms" id="platforms">
         <a href="#windows" data-os="windows"></a>
@@ -64,7 +64,7 @@ function ButtonNEw() {
         </label>
         <a class="close" href="#"></a>
       </div>
-    </>
+    </div>
   );
 }
 
