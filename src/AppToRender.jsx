@@ -11,10 +11,10 @@ import PreLoader from './Comp/preLoader/Index'
 import VideoPlayer  from './Comp/preLoader/VideoPlayer'
 import OpenVideo from './assets/video/PreLoadder.mp4'
 import TrailDemo from './Comp/BasicTrail'
+
 import {IconCloudDemo} from './Comp/circulCloud'
 import { ScrollBasedVelocityDemo } from './Comp/textAnimation'
 import { MarqueeDemo } from './Comp/Marquee/app'
-import { ShineBorderDemo } from './Comp/ShineBorder/ShineBorder'
 import Footer from './organs/Footer'
 // import ScrollThreeD './Comp/'
 function AppToRender() {
@@ -26,10 +26,9 @@ function AppToRender() {
 
   return (
     <>
-      {/* <ShineBorderDemo/> */}
-      {/* <Sticky/> */}
+      <Sticky/>
       <ScrollBasedVelocityDemo/>
-      {/* <ScrollThreeD/> */}
+      <ScrollThreeD/>
       <MarqueeDemo/>
       {/* <TrailDemo/> */}
       {/* <IconCloudDemo/> */}

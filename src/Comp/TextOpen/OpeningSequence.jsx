@@ -13,7 +13,7 @@ const OpeningSequence = () => {
     <div className="container">
       <div className="os-phrases" id="os-phrases">
         <h2>Wait...something is </h2>
-        <h2>waiting for you.</h2>
+        <h2>waiting for you...</h2>
         <h2>Prepare for the ultimate clash!</h2>
       </div>
     </div>

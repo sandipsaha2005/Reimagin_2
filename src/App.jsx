@@ -13,7 +13,7 @@ import AppToRender from './AppToRender'
 // import Main from './Comp/menuGrid'
 import { ExpandableCardDemo } from './Comp/menuGrid'
 // import useAnimation from './Hooks/useAnimation'
-import ButtonNEw from './Comp/Button'
+
 function App() {
   const [count, setCount] = useState(0)
   const [isPreLoading, setIsPreLoading] = useState(true);
@@ -38,8 +38,6 @@ function App() {
       {/* {isPreLoading ? <PreLoader /> : <AppToRender/>}     */}
       <AppToRender/>
       {/* <ExpandableCardDemo/> */}
-      
-
     </>
   )
 }

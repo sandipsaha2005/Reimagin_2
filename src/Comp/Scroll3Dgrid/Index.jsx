@@ -462,9 +462,8 @@ const GridComponent = () => {
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
-          Command Your Hero's
+          Command Your Hero's <br />Dominate the Arena!
         </h3>
-        <h3 className="content__title content__title--right text-[#FFCC00]">Dominate the Arena!</h3>
         
       </section>
       <section className="content">
@@ -496,7 +495,6 @@ const GridComponent = () => {
         <h3 className="content__title content__title--right content__title--top">
         Team Up, Fight On Win Big! 
         </h3>
-        <h3></h3>
       </section>
       <section className="content content--spacing">
         <div className="grid grid--4">
@@ -509,13 +507,10 @@ const GridComponent = () => {
           ))}
           </div>
         </div>
-        <h3 className="content__title content__title--right  text-[#FFCC00]">
-        Forge Your Legacy
+        <h3 className="content__title content__title--right">
+        Forge Your Legacy <br />in Every Battle! 
         </h3>
         <br />
-        <h3 className="content__title content__title--right pt-96 md:pt-60">
-        in Every Battle! 
-        </h3>
       </section>
       <section className="content content--spacing">
         <div className="grid grid--5">
@@ -529,11 +524,7 @@ const GridComponent = () => {
           </div>
         </div>
         <h3 className="content__title content__title--right">
-        The Ultimate
-        </h3>
-        <br />
-        <h3 className="content__title content__title--right pt-96 md:pt-96 text-[#FFCC00]">
-        Mobile Battle Experience! 
+        The Ultimate <br /> Mobile Battle Experience! 
         </h3>
       </section>
       {/* <section className="content content--spacing s-6">
