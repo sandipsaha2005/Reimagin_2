@@ -235,12 +235,12 @@ const secondRow = reviews.slice(reviews.length / 2);
 const ReviewCard = ({ img, name, username, body }) => {
   return (
   <ShineBorder
-  className="transition duration-500 ease-in-out transform hover:scale-105 hover:bg-zinc-900"
-  color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+  className="transition duration-500 ease-in-out transform hover:scale-105 hover:bg-zinc-800 border-2 border-zinc-800 overflow-hidden hover:border-zinc-300"
+  color={["#FDB515", "#FCC200", "#FFDF00"]}
 >
     <figure
       className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl p-2",
+        "relative w-64 cursor-pointer overflow-hidden rounded-xl p-2 ",
         // light styles
         // "hover:bg-gray-950/[.05]",
         // dark styles
