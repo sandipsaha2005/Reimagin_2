@@ -17,20 +17,26 @@ import { ScrollBasedVelocityDemo } from './Comp/textAnimation'
 import { MarqueeDemo } from './Comp/Marquee/app'
 import Footer from './organs/Footer'
 import { HeroParallaxDemo } from './Comp/HeroParallex/App'
+// import { GlobeDemo } from './Comp/Earth/Ui'
+import MenuMain from './Comp/menuGrid/app'
+import { TracingBeamDemo } from './Comp/TraceBeam/App'
 // import ScrollThreeD './Comp/'
 function AppToRender() {
-  const [count, setCount] = useState(0)
-  const [isPreLoading, setIsPreLoading] = useState(true);
-  const [seconds, setSeconds] = useState(0);
-  const [open, set] = useState(true);
+  // const [count, setCount] = useState(0)
+  // const [isPreLoading, setIsPreLoading] = useState(true);
+  // const [seconds, setSeconds] = useState(0);
+  // const [open, set] = useState(true);
 
 
   return (
     <>
       {/* <Sticky/> */}
       <HeroParallaxDemo/>
+      {/* <GlobeDemo/> */}
       <ScrollBasedVelocityDemo/>
+      <TracingBeamDemo/>
       <ScrollThreeD/>
+      <MenuMain/>
       <MarqueeDemo/>
       {/* <TrailDemo/> */}
       {/* <IconCloudDemo/> */}
