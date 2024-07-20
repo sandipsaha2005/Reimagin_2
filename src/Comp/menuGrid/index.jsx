@@ -12,6 +12,7 @@ import img6 from "../Scroll3Dgrid/img/6.jpg";
 import img7 from "../Scroll3Dgrid/img/7.jpg";
 import img8 from "../Scroll3Dgrid/img/8.jpg";
 import img9 from "../Scroll3Dgrid/img/9.jpg";
+import { easePoly } from "d3-ease";
 
 export function ExpandableCardDemo() {
   const [active, setActive] = useState(null);
@@ -19,8 +20,8 @@ export function ExpandableCardDemo() {
   const ref = useRef(null);
   const id = useId();
   const imageVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, x: 20 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 }},
   };
   const titleVariants = {
     initial: { scale: 1 },
@@ -49,7 +50,7 @@ export function ExpandableCardDemo() {
   }, [active]);
 
   useOutsideClick(ref, () => setActive(null));
-  console.log(smallIconActive);
+  // console.log(smallIconActive);
   return (
     <>
       <AnimatePresence>
@@ -92,16 +93,17 @@ export function ExpandableCardDemo() {
               className="w-full  h-full items-center flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden justify-between"
             >
               <motion.div
-                className="flex justify-center gap-x-20 items-center	"
+                className="flex justify-center gap-20 items-center py-5"
                 // layoutId={`image-${active.title}-${id}`}
               >
+               
                 <img
                   priority
                   width={200}
                   height={200}
                   src={img1}
                   // alt={active.title}
-                  className=" lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
                 <img
                   priority
@@ -128,8 +130,9 @@ export function ExpandableCardDemo() {
                   className=" lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
               </motion.div>
+              
               <motion.div
-                className="flex justify-center gap-x-20 items-center	"
+                className="flex justify-center gap-x-20 items-center"
                 // layoutId={`image-${active.title}-${id}`}
               >
                 <img
@@ -218,34 +221,35 @@ export function ExpandableCardDemo() {
             onClick={() => setActive(card)}
             onHoverStart={() => setSmallIconActive(true)}
             onHoverEnd={() => setSmallIconActive(false)}
-            className="p-4 flex  md:flex-row justify-center gap-12 items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer ease-in-out	duration-700	"
+            className="p-8 flex md:flex-row justify-between gap-12 items-center  rounded-xl cursor-pointer ease-in-out	duration-300"
           >
             <div className="flex gap-4 justify-center md:flex-row ">
-              {/* <motion.div layoutId={`image-${card.title}-${id}`}>
-                <img
-                  width={100}
-                  height={100}
-                  src={img1}
-                  alt={card.title}
-                  className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top"
-                />
-              </motion.div> */}
               <div className="">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
                   className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
-                  // variants={titleVariants}
                   initial="initial"
                   whileHover="hover"
+                  whileTap="tap"
+                  // onHoverEnd={() => console.log("Mouse left")}
+                  // Define your variants
+                  variants={titleVariants}
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
                   className="text-neutral-600 dark:text-neutral-400 text-center md:text-left"
-                  // variants={descriptionVariants}
                   initial="initial"
                   whileHover="hover"
+                  whileTap="tap"
+                  onHoverEnd={() => console.log("Mouse left")}
+                  // Define your variants
+                  variants={{
+                    // initial: { opacity: 0, y: 20 },
+                    hover: { opacity: 1, y: 0 },
+                    tap: { scale: 0.95 },
+                  }}
                 >
                   {card.description}
                 </motion.p>
@@ -257,15 +261,20 @@ export function ExpandableCardDemo() {
             > */}
             {smallIconActive && (
               <motion.div
-                className="h-4 flex gap-2"
+                className="h-4 flex gap-8"
                 initial="hidden"
                 animate="visible"
+                exit='exit'
                 variants={{
                   hidden: { opacity: 0 },
                   visible: {
                     opacity: 1,
                     transition: { staggerChildren: 0.2 },
                   },
+                  exit:{
+                    opacity: 0,
+                    transition: { staggerChildren: 0.2 },
+                  }
                 }}
               >
                 <motion.img
@@ -273,6 +282,7 @@ export function ExpandableCardDemo() {
                   alt=""
                   className="override-img"
                   variants={imageVariants}
+                  
                 />
                 <motion.img
                   src={img1}
@@ -338,7 +348,7 @@ export const CloseIcon = () => {
 const cards = [
   {
     description: "Lana Del Rey",
-    title: "Summertime Sadness",
+    title: "MOBILE lEGEND",
     src: { img1 },
     ctaText: "Play",
     ctaLink: "https://ui.aceternity.com/templates",

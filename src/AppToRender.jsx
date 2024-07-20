@@ -16,6 +16,7 @@ import {IconCloudDemo} from './Comp/circulCloud'
 import { ScrollBasedVelocityDemo } from './Comp/textAnimation'
 import { MarqueeDemo } from './Comp/Marquee/app'
 import Footer from './organs/Footer'
+import { HeroParallaxDemo } from './Comp/HeroParallex/App'
 // import ScrollThreeD './Comp/'
 function AppToRender() {
   const [count, setCount] = useState(0)
@@ -26,7 +27,8 @@ function AppToRender() {
 
   return (
     <>
-      <Sticky/>
+      {/* <Sticky/> */}
+      <HeroParallaxDemo/>
       <ScrollBasedVelocityDemo/>
       <ScrollThreeD/>
       <MarqueeDemo/>

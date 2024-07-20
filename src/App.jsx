@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       {/* {isPreLoading ? <PreLoader /> : <AppToRender/>}     */}
-      {/* <AppToRender/> */}
+      <AppToRender/>
       <ExpandableCardDemo/>
       <ExpandableCardDemo/>
       <ExpandableCardDemo/>
