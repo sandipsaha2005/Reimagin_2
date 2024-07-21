@@ -11,7 +11,7 @@ import PreLoader from './Comp/preLoader/Index'
 import AppToRender from './AppToRender'
 // import ScrollThreeD './Comp/'
 // import Main from './Comp/menuGrid'
-import { ExpandableCardDemo } from './Comp/menuGrid'
+// import { ExpandableCardDemo } from './Comp/menuGrid'
 // import useAnimation from './Hooks/useAnimation'
 
 function App() {

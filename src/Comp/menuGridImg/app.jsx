@@ -4,10 +4,11 @@ import {ExpandableCardDemo2} from './index2'
 import {ExpandableCardDemo3} from './index3'
 import {ExpandableCardDemo4} from './index4'
 import {ExpandableCardDemo5} from './index5'
-const MenuMain = () => {
+const MenuMain1 = () => {
   return (
     <div>
-      <h1 className='p-8 tracking-[20px] text-6xl flex justify-center items-center text-[#B65C64]'>VIDEOS</h1>
+      <h1 className='p-8 tracking-[20px] text-6xl flex justify-center items-center text-[#C3A26C]'>NEWS</h1>
+      {/* <hr className="bg-zinc-700 h-[1px] border-0" /> */}
      <ExpandableCardDemo1/>
      <hr className="bg-zinc-700 h-[1px] border-0" />
       <ExpandableCardDemo2/>
@@ -22,4 +23,4 @@ const MenuMain = () => {
   )
 }
 
-export default MenuMain
+export default MenuMain1

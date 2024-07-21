@@ -18,8 +18,10 @@ import { MarqueeDemo } from './Comp/Marquee/app'
 import Footer from './organs/Footer'
 import { HeroParallaxDemo } from './Comp/HeroParallex/App'
 // import { GlobeDemo } from './Comp/Earth/Ui'
+import MenuMain1 from './Comp/menuGridImg/app'
 import MenuMain from './Comp/menuGrid/app'
 import { TracingBeamDemo } from './Comp/TraceBeam/App'
+import { ThreeDCardDemo } from './Comp/threeDCard/index'
 // import ScrollThreeD './Comp/'
 function AppToRender() {
   // const [count, setCount] = useState(0)
@@ -31,16 +33,18 @@ function AppToRender() {
   return (
     <>
       {/* <Sticky/> */}
-      <HeroParallaxDemo/>
       {/* <GlobeDemo/> */}
-      <ScrollBasedVelocityDemo/>
-      <TracingBeamDemo/>
-      <ScrollThreeD/>
-      <MenuMain/>
-      <MarqueeDemo/>
       {/* <TrailDemo/> */}
       {/* <IconCloudDemo/> */}
-      <Footer/>
+      {/* <HeroParallaxDemo/>
+      
+      <MenuMain1/>
+      <ScrollBasedVelocityDemo/>
+      <ScrollThreeD/>
+      <MarqueeDemo/>
+      <MenuMain/>
+      <Footer/> */}
+      <TracingBeamDemo/>
     </>
   )
 }
