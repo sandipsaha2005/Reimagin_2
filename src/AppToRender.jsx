@@ -36,14 +36,13 @@ function AppToRender() {
       {/* <GlobeDemo/> */}
       {/* <TrailDemo/> */}
       {/* <IconCloudDemo/> */}
-      {/* <HeroParallaxDemo/>
-      
+      <HeroParallaxDemo/>
       <MenuMain1/>
       <ScrollBasedVelocityDemo/>
       <ScrollThreeD/>
       <MarqueeDemo/>
       <MenuMain/>
-      <Footer/> */}
+      <Footer/>
       <TracingBeamDemo/>
     </>
   )

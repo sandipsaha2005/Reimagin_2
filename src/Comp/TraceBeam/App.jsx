@@ -13,6 +13,7 @@ import Barren from "../../assets/map/the-barren-lands.jpg";
 import Vonetis from "../../assets/map/vonetis-sea.jpg";
 import Cadia from "../../assets/map/cadia-riverland.jpg";
 import { ThreeDCardDemo} from '../threeDCard/index'
+import shadows from "@mui/material/styles/shadows";
 export function TracingBeamDemo() {
   return (
     <TracingBeam className="px-6">
@@ -38,7 +39,7 @@ export function TracingBeamDemo() {
           //     {item.description}
           //   </div>
           // </div>
-          <ThreeDCardDemo src={item.image} title={item.title} desc={item.description} bg={item.bg} key={index}/>
+          <ThreeDCardDemo src={item.image} title={item.title} desc={item.description} bg={item.bg} shadow={item.shadow} key={index}/>
         ))}
       </div>
     </TracingBeam>
@@ -47,8 +48,9 @@ export function TracingBeamDemo() {
 
 const dummyContent = [
   {
-    title: "LAND OF DAWN",
-    bg: "text-[#B8860B]",
+    title: "LAND OF DAWN ( 7 KINGDOM)",
+    bg: "[#B8860B]",
+    shadow: "hover:shadow-[#B8860B]/[0.6]",
     description: (
       <>
         <p>
@@ -62,7 +64,8 @@ const dummyContent = [
   },
   {
     title: "AGELTA DRYLANDS",
-    bg: "text-[#C3A26C]",
+    bg: "[#C3A26C]",
+    shadow: "hover:shadow-[#C3A26C]/[0.6]",
     description: (
       <>
         <p>
@@ -77,7 +80,8 @@ const dummyContent = [
   },
   {
     title: "AZRYA WOODLANDS",
-    bg: "text-[#69B84B]",
+    bg: "[#69B84B]",
+    shadow: "hover:shadow-[#69B84B]/[0.6]",
     description: (
       <>
         <p>
@@ -92,7 +96,8 @@ const dummyContent = [
   },
   {
     title: "MONIYAN",
-    bg: "text-[#CDD168]",
+    bg: "[#CDD168]",
+    shadow: "hover:shadow-[#CDD168]/[0.6]",
     description: (
       <>
         <p>
@@ -108,7 +113,8 @@ const dummyContent = [
   },
   {
     title: "NORTHEN VALE",
-    bg: "text-[#EADED4]",
+    bg: "[#EADED4]",
+    shadow: "hover:shadow-[#EADED4]/[0.6]",
     description: (
       <>
         <p>
@@ -123,7 +129,8 @@ const dummyContent = [
   },
   {
     title: "THE BARREN LANDS",
-    bg: "text-[#B65C64]",
+    bg: "[#B65C64]",
+    shadow: "hover:shadow-[#B65C64]/[0.6]",
     description: (
       <>
         <p>
@@ -138,7 +145,8 @@ const dummyContent = [
   },
   {
     title: "VONETIS SEA",
-    bg: "text-[#139591]",
+    bg: "[#139591]",
+    shadow: "hover:shadow-[#139591]/[0.6]",
     description: (
       <>
         <p>
@@ -152,7 +160,8 @@ const dummyContent = [
   },
   {
     title: "CADIA RIVERLANDS",
-    bg: "text-[#6D9C2F]",
+    bg: "[#6D9C2F]",
+    shadow: "hover:shadow-[#6D9C2F]/[0.6]",
     description: (
       <>
         <p>

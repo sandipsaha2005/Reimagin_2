@@ -2,16 +2,17 @@ import React from 'react';
 // import Image from 'react-image';
 // import { Link } from 'react-router-dom';
 import { CardBody, CardContainer, CardItem } from './Ui';
+import { BiGasPump } from 'react-icons/bi';
 
-export function ThreeDCardDemo({src,title,desc,bg}) {
+export function ThreeDCardDemo({src,title,desc,bg,shadow}) {
   // console.log(src);
   return (
     <CardContainer className="inter-var">
-      <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-[#09090b]  w-auto sm:w-[40rem] h-auto rounded-xl p-6">
+      <CardBody className={`relative group/card hover:shadow-2xl ${shadow} bg-[#09090b]  w-auto sm:w-[40rem] h-auto rounded-xl p-8`}>
         <CardItem
           translateZ="50"
           // className="text-xl font-bold text-neutral-600 dark:text-white"
-          className={`text-3xl tracking-widest font-bold ${bg} mb-2`}
+          className={`text-3xl tracking-widest font-bold text-${bg} mb-2`}
         >
           {title}
         </CardItem>
