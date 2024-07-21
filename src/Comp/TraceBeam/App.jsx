@@ -49,7 +49,7 @@ export function TracingBeamDemo() {
 const dummyContent = [
   {
     title: "LAND OF DAWN ( 7 KINGDOM)",
-    bg: "[#B8860B]",
+    bg: "text-[#B8860B]",
     shadow: "hover:shadow-[#B8860B]/[0.6]",
     description: (
       <>
@@ -64,7 +64,7 @@ const dummyContent = [
   },
   {
     title: "AGELTA DRYLANDS",
-    bg: "[#C3A26C]",
+    bg: "text-[#C3A26C]",
     shadow: "hover:shadow-[#C3A26C]/[0.6]",
     description: (
       <>
@@ -80,7 +80,7 @@ const dummyContent = [
   },
   {
     title: "AZRYA WOODLANDS",
-    bg: "[#69B84B]",
+    bg: "text-[#69B84B]",
     shadow: "hover:shadow-[#69B84B]/[0.6]",
     description: (
       <>
@@ -96,7 +96,7 @@ const dummyContent = [
   },
   {
     title: "MONIYAN",
-    bg: "[#CDD168]",
+    bg: "text-[#CDD168]",
     shadow: "hover:shadow-[#CDD168]/[0.6]",
     description: (
       <>
@@ -113,7 +113,7 @@ const dummyContent = [
   },
   {
     title: "NORTHEN VALE",
-    bg: "[#EADED4]",
+    bg: "text-[#EADED4]",
     shadow: "hover:shadow-[#EADED4]/[0.6]",
     description: (
       <>
@@ -129,7 +129,7 @@ const dummyContent = [
   },
   {
     title: "THE BARREN LANDS",
-    bg: "[#B65C64]",
+    bg: "text-[#B65C64]",
     shadow: "hover:shadow-[#B65C64]/[0.6]",
     description: (
       <>
@@ -145,7 +145,7 @@ const dummyContent = [
   },
   {
     title: "VONETIS SEA",
-    bg: "[#139591]",
+    bg: "text-[#139591]",
     shadow: "hover:shadow-[#139591]/[0.6]",
     description: (
       <>
@@ -160,7 +160,7 @@ const dummyContent = [
   },
   {
     title: "CADIA RIVERLANDS",
-    bg: "[#6D9C2F]",
+    bg: "text-[#6D9C2F]",
     shadow: "hover:shadow-[#6D9C2F]/[0.6]",
     description: (
       <>

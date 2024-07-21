@@ -12,7 +12,7 @@ export function ThreeDCardDemo({src,title,desc,bg,shadow}) {
         <CardItem
           translateZ="50"
           // className="text-xl font-bold text-neutral-600 dark:text-white"
-          className={`text-3xl tracking-widest font-bold text-${bg} mb-2`}
+          className={`text-3xl tracking-widest font-bold ${bg} mb-2`}
         >
           {title}
         </CardItem>
