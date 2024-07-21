@@ -37,8 +37,8 @@ function AppToRender() {
       {/* <TrailDemo/> */}
       {/* <IconCloudDemo/> */}
       <HeroParallaxDemo/>
-      <MenuMain1/>
       <ScrollBasedVelocityDemo/>
+      <MenuMain1/>
       <TracingBeamDemo/>
       <ScrollThreeD/>
       <MarqueeDemo/>
