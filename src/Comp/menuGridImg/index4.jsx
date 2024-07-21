@@ -14,6 +14,7 @@ import img6 from "../Scroll3Dgrid/img/6.jpg";
 import img7 from "../Scroll3Dgrid/img/7.jpg";
 import img8 from "../Scroll3Dgrid/img/8.jpg";
 import img9 from "../Scroll3Dgrid/img/9.jpg";
+import AnimatedShinyText from "../ShineText/ui"
 import { easePoly } from "d3-ease";
 import {DirectionAwareHover} from './ui'
 import CloseIcon from "@mui/icons-material/Close";
@@ -257,7 +258,9 @@ export function ExpandableCardDemo4() {
                   animate={smallIconActive ? "active" : "initial"}
                   variants={titleVariants}
                 >
-                  {card.title}
+                  <AnimatedShinyText>
+                  {card.title}  
+                  </AnimatedShinyText>
                 </motion.h3>
                 {/* <motion.p
                   layoutId={`description-${card.description}-${id}`}

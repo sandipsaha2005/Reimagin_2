@@ -17,6 +17,7 @@ import { easePoly } from "d3-ease";
 import CloseIcon from "@mui/icons-material/Close";
 import {DirectionAwareHover} from './ui'
 import { SplashScreen } from "../splash-screen";
+import AnimatedShinyText from "../ShineText/ui";
 export function ExpandableCardDemo1() {
   const [active, setActive] = useState(null);
   const [smallIconActive, setSmallIconActive] = useState(false);
@@ -256,7 +257,10 @@ export function ExpandableCardDemo1() {
                   animate={smallIconActive ? "active" : "initial"}
                   variants={titleVariants}
                 >
-                  {card.title}
+                  <AnimatedShinyText>
+                  {card.title}  
+                  </AnimatedShinyText>
+                  
                 </motion.h3>
                 {/* <motion.p
                   layoutId={`description-${card.description}-${id}`}
