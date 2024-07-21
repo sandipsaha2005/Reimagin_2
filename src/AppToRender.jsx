@@ -18,6 +18,7 @@ import { MarqueeDemo } from './Comp/Marquee/app'
 import Footer from './organs/Footer'
 import { HeroParallaxDemo } from './Comp/HeroParallex/App'
 // import { GlobeDemo } from './Comp/Earth/Ui'
+import MenuMain1 from './Comp/menuGridImg/app'
 import MenuMain from './Comp/menuGrid/app'
 import { TracingBeamDemo } from './Comp/TraceBeam/App'
 // import ScrollThreeD './Comp/'
@@ -31,16 +32,17 @@ function AppToRender() {
   return (
     <>
       {/* <Sticky/> */}
-      <HeroParallaxDemo/>
+      {/* <HeroParallaxDemo/> */}
       {/* <GlobeDemo/> */}
-      <ScrollBasedVelocityDemo/>
-      <TracingBeamDemo/>
-      <ScrollThreeD/>
+      {/* <ScrollBasedVelocityDemo/> */}
+      {/* <TracingBeamDemo/> */}
+      {/* <ScrollThreeD/> */}
+      <MenuMain1/>
       <MenuMain/>
-      <MarqueeDemo/>
+      {/* <MarqueeDemo/> */}
       {/* <TrailDemo/> */}
       {/* <IconCloudDemo/> */}
-      <Footer/>
+      {/* <Footer/> */}
     </>
   )
 }

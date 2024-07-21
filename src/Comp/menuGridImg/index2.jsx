@@ -1,6 +1,7 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 // import img from "next/image";
 import "./index.css";
+import { Box, Typography } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../../Hooks/use-outside-click";
 import img1 from "../Scroll3Dgrid/img/1.jpg";
@@ -13,21 +14,56 @@ import img7 from "../Scroll3Dgrid/img/7.jpg";
 import img8 from "../Scroll3Dgrid/img/8.jpg";
 import img9 from "../Scroll3Dgrid/img/9.jpg";
 import { easePoly } from "d3-ease";
-
-export function ExpandableCardDemo() {
+import CloseIcon from "@mui/icons-material/Close";
+import { SplashScreen } from "../splash-screen";
+export function ExpandableCardDemo2() {
   const [active, setActive] = useState(null);
   const [smallIconActive, setSmallIconActive] = useState(false);
-  const ref = useRef(null);
-  const id = useId();
-  const imageVariants = {
-    hidden: { opacity: 0, x: 20 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.5 }},
-  };
-  const titleVariants = {
-    initial: { scale: 1 },
-    hover: { scale: 1.1, transition: { duration: 0.3 } },
+  const [loader, setLoader] = useState(true);
+  // useEffect(() => {
+  //   // setLoader(true)
+
+  // }, []);
+  const handleOnlick = (card) => {
+    setActive(card);
+    const loaderTimer = setTimeout(() => {
+      setLoader(false);
+    }, 1000);
+
+    // Clean up the timer when the component is unmounted or when the effect is re-executed
+    return () => clearTimeout(loaderTimer);
   };
 
+  console.log(loader);
+  const ref = useRef(null);
+  const id = useId();
+  const titleVariants = {
+    initial: {
+      opacity: 0.5,
+      scale: 0.8,
+    },
+    hover: {
+      scale: 1.3,
+    },
+    tap: {
+      scale: 0.95,
+    },
+    active: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+  // const titleVariants = {
+  //   initial: { scale: 1 },
+  //   hover: { scale: 1.1, transition: { duration: 0.3 } },
+  // };
+  const imageVariants = {
+    hidden: { opacity: 0, x: 20 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+  };
   const descriptionVariants = {
     initial: { opacity: 1 },
     hover: { opacity: 0.8, transition: { duration: 0.3 } },
@@ -85,140 +121,104 @@ export function ExpandableCardDemo() {
               className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
               onClick={() => setActive(null)}
             >
-              <CloseIcon />
+              {/* <CloseIcon /> */}
+              {/* <CloseIcon/> */}
             </motion.button>
+
             <motion.div
-              layoutId={`card-${active.title}-${id}`}
+              layoutId={`card-${active.title}-${id}`} //
               ref={ref}
-              className="w-full  h-full items-center flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden justify-between"
+              className="w-full relative  h-full items-center flex flex-col dark:bg-neutral-900 bg-white gap-y-8  sm:rounded-3xl overflow-hidden justify-center"
             >
-              <motion.div
-                className="flex justify-center gap-20 items-center py-5"
-                // layoutId={`image-${active.title}-${id}`}
+              <Box
+                className="absolute top-4 right-4"
+                sx={{
+                  display: "inline-block",
+                  "&:hover .icon": {
+                    transform: "rotate(180deg)", // Rotate 180 degrees on hover
+                    transition: "transform 0.3s ease-in-out",
+                  },
+                  // top:'30px',
+                }}
+                onClick={() => setActive(null)}
               >
-               
-                <img
-                  priority
-                  width={200}
-                  height={200}
-                  src={img1}
-                  // alt={active.title}
-                  className="sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                <CloseIcon
+                  className="icon"
+                  fontSize="large"
+                  sx={{ color: "white" }}
                 />
-                <img
-                  priority
-                  width={200}
-                  height={200}
-                  src={img2}
-                  // alt={active.title}
-                  className=" lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
-                />
-                <img
-                  priority
-                  width={200}
-                  height={200}
-                  src={img3}
-                  // alt={active.title}
-                  className=" lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
-                />
-                <img
-                  priority
-                  width={200}
-                  height={200}
-                  src={img4}
-                  // alt={active.title}
-                  className=" lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
-                />
-              </motion.div>
-              
-              <motion.div
-                className="flex justify-center gap-x-20 items-center"
-                // layoutId={`image-${active.title}-${id}`}
-              >
-                <img
-                  priority
-                  width={200}
-                  height={200}
-                  src={img1}
-                  // alt={active.title}
-                  className=" lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
-                />
-                <img
-                  priority
-                  width={200}
-                  height={200}
-                  src={img2}
-                  // alt={active.title}
-                  className=" lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
-                />
-                <img
-                  priority
-                  width={200}
-                  height={200}
-                  src={img3}
-                  // alt={active.title}
-                  className=" lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
-                />
-                <img
-                  priority
-                  width={200}
-                  height={200}
-                  src={img4}
-                  // alt={active.title}
-                  className=" lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
-                />
-              </motion.div>
-
-              {/* <div>
-                <div className="flex justify-between items-start p-4">
-                  <div className="">
-                    <motion.h3
-                      layoutId={`title-${active.title}-${id}`}
-                      className="font-bold text-neutral-700 dark:text-neutral-200"
-                    >
-                      {active.title}
-                    </motion.h3>
-                    <motion.p
-                      layoutId={`description-${active.description}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400"
-                    >
-                      {active.description}
-                    </motion.p>
-                  </div>
-
-                  <motion.a
-                    layoutId={`button-${active.title}-${id}`}
-                    href={active.ctaLink}
-                    target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                  >
-                    {active.ctaText}
-                  </motion.a>
-                </div>
-                <div className="pt-4 relative px-4">
+              </Box>
+              <Typography sx={{ fontSize: "3em", color: "white" }}>
+                For You
+              </Typography>
+              {loader ? (
+                <SplashScreen />
+              ) : (
+                <>
                   <motion.div
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="flex justify-center gap-x-10 items-center"
+                    // layoutId={`image-${active.title}-${id}`}
                   >
-                    {typeof active.content === "function"
-                      ? active.content()
-                      : active.content}
+                    <img
+                      className="rounded-xl"
+                      width="320"
+                      height="220"
+                      src="https://akmweb.youngjoygame.com/web/gms/image/4d3fe74a2127a30a7a89659731f4eaed.jpg"
+                    ></img>
+                    <img
+                      className="rounded-xl"
+                      width="320"
+                      height="220"
+                      src="https://akmweb.youngjoygame.com/web/gms/image/5a16754b4ce0fc949eb3a926cd443c4a.jpg"
+                    ></img>
+                    <img
+                      className="rounded-xl"
+                      width="320"
+                      height="220"
+                      src="https://akmweb.youngjoygame.com/web/gms/image/c589af0e4df270b2c72a1cf8fd9d100a.png"
+                    ></img>
+                    
                   </motion.div>
-                </div>
-              </div> */}
+
+                  <motion.div
+                    className="flex justify-center gap-x-10 items-center"
+                    // layoutId={`image-${active.title}-${id}`}
+                  >
+                    <img
+                      className="rounded-xl"
+                      width="320"
+                      height="220"
+                      src="https://akmweb.youngjoygame.com/web/gms/image/163db4a75bc30862ab59987768fc828d.jpg"
+                     
+                    ></img>
+                    <img
+                      className="rounded-xl"
+                      width="320"
+                      height="220"
+                      src="https://akmweb.youngjoygame.com/web/gms/image/a80033516b24f44ec1ebabe689680bdd.jpg"
+                     
+                    ></img>
+                    <img
+                      className="rounded-xl"
+                      width="320"
+                      height="220"
+                      src="https://akmweb.youngjoygame.com/web/gms/image/2053d9bbb7172d7b4e172871fe6612da.jpg"
+                     
+                    ></img>
+                    
+                  </motion.div>
+                </>
+              )}
             </motion.div>
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="mx-auto w-full gap-4">
+      <ul className="mx-auto w-full gap-2">
         {cards.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
-            onClick={() => setActive(card)}
+            onClick={() => handleOnlick(card)}
             onHoverStart={() => setSmallIconActive(true)}
             onHoverEnd={() => setSmallIconActive(false)}
             className="p-8 flex md:flex-row justify-between gap-12 items-center  rounded-xl cursor-pointer ease-in-out	duration-300"
@@ -232,12 +232,12 @@ export function ExpandableCardDemo() {
                   whileHover="hover"
                   whileTap="tap"
                   // onHoverEnd={() => console.log("Mouse left")}
-                  // Define your variants
+                  animate={smallIconActive ? "active" : "initial"}
                   variants={titleVariants}
                 >
                   {card.title}
                 </motion.h3>
-                <motion.p
+                {/* <motion.p
                   layoutId={`description-${card.description}-${id}`}
                   className="text-neutral-600 dark:text-neutral-400 text-center md:text-left"
                   initial="initial"
@@ -252,7 +252,7 @@ export function ExpandableCardDemo() {
                   }}
                 >
                   {card.description}
-                </motion.p>
+                </motion.p> */}
               </div>
             </div>
             {/* <motion.button */}
@@ -264,40 +264,41 @@ export function ExpandableCardDemo() {
                 className="h-4 flex gap-8"
                 initial="hidden"
                 animate="visible"
-                exit='exit'
+                exit="exit"
                 variants={{
                   hidden: { opacity: 0 },
                   visible: {
                     opacity: 1,
                     transition: { staggerChildren: 0.2 },
                   },
-                  exit:{
+                  exit: {
                     opacity: 0,
                     transition: { staggerChildren: 0.2 },
-                  }
+                  },
                 }}
               >
                 <motion.img
-                  src={img1}
-                  alt=""
-                  className="override-img"
-                  variants={imageVariants}
-                  
-                />
-                <motion.img
-                  src={img1}
+                  src={
+                    "https://akmweb.youngjoygame.com/web/gms/image/4d3fe74a2127a30a7a89659731f4eaed.jpg"
+                  }
                   alt=""
                   className="override-img"
                   variants={imageVariants}
                 />
                 <motion.img
-                  src={img1}
+                  src={"https://akmweb.youngjoygame.com/web/gms/image/5a16754b4ce0fc949eb3a926cd443c4a.jpg"}
                   alt=""
                   className="override-img"
                   variants={imageVariants}
                 />
                 <motion.img
-                  src={img1}
+                  src={"https://akmweb.youngjoygame.com/web/gms/image/c589af0e4df270b2c72a1cf8fd9d100a.png"}
+                  alt=""
+                  className="override-img"
+                  variants={imageVariants}
+                />
+                <motion.img
+                  src={"https://akmweb.youngjoygame.com/web/gms/image/163db4a75bc30862ab59987768fc828d.jpg"}
                   alt=""
                   className="override-img"
                   variants={imageVariants}
@@ -312,38 +313,38 @@ export function ExpandableCardDemo() {
   );
 }
 
-export const CloseIcon = () => {
-  return (
-    <motion.svg
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      exit={{
-        opacity: 0,
-        transition: {
-          duration: 0.05,
-        },
-      }}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-4 w-4"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M18 6l-12 12" />
-      <path d="M6 6l12 12" />
-    </motion.svg>
-  );
-};
+// export const CloseIcon = () => {
+//   return (
+//     <motion.svg
+//       initial={{
+//         opacity: 0,
+//       }}
+//       animate={{
+//         opacity: 1,
+//       }}
+//       exit={{
+//         opacity: 0,
+//         transition: {
+//           duration: 0.05,
+//         },
+//       }}
+//       xmlns="http://www.w3.org/2000/svg"
+//       width="24"
+//       height="24"
+//       viewBox="0 0 24 24"
+//       fill="none"
+//       stroke="currentColor"
+//       strokeWidth="2"
+//       strokeLinecap="round"
+//       strokeLinejoin="round"
+//       className="h-4 w-4"
+//     >
+//       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+//       <path d="M18 6l-12 12" />
+//       <path d="M6 6l12 12" />
+//     </motion.svg>
+//   );
+// };
 
 const cards = [
   {
