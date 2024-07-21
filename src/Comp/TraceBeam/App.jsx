@@ -38,7 +38,7 @@ export function TracingBeamDemo() {
           //     {item.description}
           //   </div>
           // </div>
-          <ThreeDCardDemo src={item.image} title={item.title} desc={item.description}/>
+          <ThreeDCardDemo src={item.image} title={item.title} desc={item.description} bg={item.bg} key={index}/>
         ))}
       </div>
     </TracingBeam>

@@ -45,7 +45,6 @@ function AppToRender() {
       <MenuMain/>
       <Footer/> */}
       <TracingBeamDemo/>
-      <ThreeDCardDemo/>
     </>
   )
 }
