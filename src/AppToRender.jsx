@@ -32,17 +32,17 @@ function AppToRender() {
   return (
     <>
       {/* <Sticky/> */}
-      {/* <HeroParallaxDemo/> */}
       {/* <GlobeDemo/> */}
-      {/* <ScrollBasedVelocityDemo/> */}
-      {/* <TracingBeamDemo/> */}
-      {/* <ScrollThreeD/> */}
-      <MenuMain1/>
-      <MenuMain/>
-      {/* <MarqueeDemo/> */}
       {/* <TrailDemo/> */}
       {/* <IconCloudDemo/> */}
-      {/* <Footer/> */}
+      <HeroParallaxDemo/>
+      <TracingBeamDemo/>
+      <MenuMain1/>
+      <ScrollBasedVelocityDemo/>
+      <ScrollThreeD/>
+      <MarqueeDemo/>
+      <MenuMain/>
+      <Footer/>
     </>
   )
 }
