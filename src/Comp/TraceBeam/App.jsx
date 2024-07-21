@@ -12,32 +12,33 @@ import North from "../../assets/map/northan-vale.jpg";
 import Barren from "../../assets/map/the-barren-lands.jpg";
 import Vonetis from "../../assets/map/vonetis-sea.jpg";
 import Cadia from "../../assets/map/cadia-riverland.jpg";
-
+import { ThreeDCardDemo} from '../threeDCard/index'
 export function TracingBeamDemo() {
   return (
     <TracingBeam className="px-6">
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
         {dummyContent.map((item, index) => (
-          <div key={`content-${index}`} className="mb-10">
-            {/* <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
-              {item.badge}
-            </h2> */}
+          // <div key={`content-${index}`} className="mb-10">
+          //   {/* <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+          //     {item.badge}
+          //   </h2> */}
 
-            <p className={`text-3xl mb-4 ${item.bg}`}>{item.title}</p>
+          //   <p className={`text-3xl mb-4 ${item.bg}`}>{item.title}</p>
 
-            <div className="text-md  prose prose-sm dark:prose-invert">
-              {item?.image && (
-                <img
-                  src={item.image}
-                  alt="blog thumbnail"
-                  height="900"
-                  width="900"
-                  className="rounded-lg mb-10 object-cover"
-                />
-              )}
-              {item.description}
-            </div>
-          </div>
+          //   <div className="text-md  prose prose-sm dark:prose-invert">
+          //     {item?.image && (
+          //       <img
+          //         src={item.image}
+          //         alt="blog thumbnail"
+          //         height="900"
+          //         width="900"
+          //         className="rounded-lg mb-10 object-cover"
+          //       />
+          //     )}
+          //     {item.description}
+          //   </div>
+          // </div>
+          <ThreeDCardDemo src={item.image} title={item.title} desc={item.description}/>
         ))}
       </div>
     </TracingBeam>

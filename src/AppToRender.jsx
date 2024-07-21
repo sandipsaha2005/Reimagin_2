@@ -21,6 +21,7 @@ import { HeroParallaxDemo } from './Comp/HeroParallex/App'
 import MenuMain1 from './Comp/menuGridImg/app'
 import MenuMain from './Comp/menuGrid/app'
 import { TracingBeamDemo } from './Comp/TraceBeam/App'
+import { ThreeDCardDemo } from './Comp/threeDCard/index'
 // import ScrollThreeD './Comp/'
 function AppToRender() {
   // const [count, setCount] = useState(0)
@@ -35,14 +36,16 @@ function AppToRender() {
       {/* <GlobeDemo/> */}
       {/* <TrailDemo/> */}
       {/* <IconCloudDemo/> */}
-      <HeroParallaxDemo/>
-      <TracingBeamDemo/>
+      {/* <HeroParallaxDemo/>
+      
       <MenuMain1/>
       <ScrollBasedVelocityDemo/>
       <ScrollThreeD/>
       <MarqueeDemo/>
       <MenuMain/>
-      <Footer/>
+      <Footer/> */}
+      <TracingBeamDemo/>
+      <ThreeDCardDemo/>
     </>
   )
 }
