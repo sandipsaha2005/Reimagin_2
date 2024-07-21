@@ -10,6 +10,10 @@ import ScrollThreeD from './Comp/Scroll3Dgrid/Index'
 import PreLoader from './Comp/preLoader/Index'
 import AppToRender from './AppToRender'
 // import ScrollThreeD './Comp/'
+// import Main from './Comp/menuGrid'
+import { ExpandableCardDemo } from './Comp/menuGrid'
+// import useAnimation from './Hooks/useAnimation'
+
 function App() {
   const [count, setCount] = useState(0)
   const [isPreLoading, setIsPreLoading] = useState(true);
@@ -26,12 +30,14 @@ function App() {
       return () => clearInterval(interval);
     }
   }, [seconds]);
+  // useAnimation();
 // console.log(seconds);
 
   return (
     <>
       {/* {isPreLoading ? <PreLoader /> : <AppToRender/>}     */}
       <AppToRender/>
+
     </>
   )
 }
