@@ -15,6 +15,7 @@ export default {
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       },
       keyframes: {
+        
         "shine-pulse": {
           "0%": {
             "background-position": "0% 0%",
@@ -38,7 +39,7 @@ export default {
     }
   },
   plugins: [
-    addVariablesForColors
+    addVariablesForColors,
   ],
 }
 function addVariablesForColors({ addBase, theme }):any {

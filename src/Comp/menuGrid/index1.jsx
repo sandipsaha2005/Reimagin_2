@@ -1,7 +1,7 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 // import img from "next/image";
 import "./index.css";
-import { Box ,Typography} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../../Hooks/use-outside-click";
 import img1 from "../Scroll3Dgrid/img/1.jpg";
@@ -15,43 +15,45 @@ import img8 from "../Scroll3Dgrid/img/8.jpg";
 import img9 from "../Scroll3Dgrid/img/9.jpg";
 import { easePoly } from "d3-ease";
 import CloseIcon from "@mui/icons-material/Close";
-import {SplashScreen} from '../splash-screen'
+
+import { SplashScreen } from "../splash-screen";
 export function ExpandableCardDemo1() {
   const [active, setActive] = useState(null);
   const [smallIconActive, setSmallIconActive] = useState(false);
-  const [loader, setLoader]=useState(true) 
+  const [loader, setLoader] = useState(true);
   // useEffect(() => {
   //   // setLoader(true)
-    
+
   // }, []);
-  const handleOnlick=(card)=>{
-    setActive(card)
+  const handleOnlick = (card) => {
+    setActive(card);
     const loaderTimer = setTimeout(() => {
       setLoader(false);
     }, 1000);
 
     // Clean up the timer when the component is unmounted or when the effect is re-executed
-    return () =>   clearTimeout(loaderTimer);
-  }
+    return () => clearTimeout(loaderTimer);
+  };
 
-
-  console.log(loader);
+  // console.log(loader);
   const ref = useRef(null);
   const id = useId();
   const titleVariants = {
     initial: {
-      opacity: .5,
-      scale: 0.8,
+      opacity: 0.5,
+      scale: 1.2,
     },
     hover: {
-      scale: 1.3,
+      scale: 1.4,
+      
+    
     },
     tap: {
       scale: 0.95,
     },
     active: {
       opacity: 1,
-      scale: 1,
+      scale: 1.4,
       transition: {
         duration: 0.5,
       },
@@ -125,9 +127,9 @@ export function ExpandableCardDemo1() {
               {/* <CloseIcon /> */}
               {/* <CloseIcon/> */}
             </motion.button>
-            
+
             <motion.div
-              layoutId={`card-${active.title}-${id}`} // 
+              layoutId={`card-${active.title}-${id}`} //
               ref={ref}
               className="w-full relative  h-full items-center flex flex-col dark:bg-neutral-900 bg-white gap-y-8  sm:rounded-3xl overflow-hidden justify-center"
             >
@@ -149,13 +151,18 @@ export function ExpandableCardDemo1() {
                   sx={{ color: "white" }}
                 />
               </Box>
-              <Typography  sx={{fontSize:'3em',color:'white'}}>For You</Typography>
-              {loader ? <SplashScreen/> : <>
-              <motion.div
-                className="flex justify-center gap-x-10 items-center"
-                // layoutId={`image-${active.title}-${id}`}
-              >
-                <iframe
+              <Typography sx={{ fontSize: "3em", color: "white" }}>
+                For You
+              </Typography>
+              {loader ? (
+                <SplashScreen />
+              ) : (
+                <>
+                  <motion.div
+                    className="flex justify-center gap-x-10 items-center"
+                    // layoutId={`image-${active.title}-${id}`}
+                  >
+                    <iframe
                   className="rounded-xl"
                   width="320"
                   height="220"
@@ -188,14 +195,13 @@ export function ExpandableCardDemo1() {
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                 ></iframe>
-                
-              </motion.div>
+                  </motion.div>
 
-              <motion.div
-                className="flex justify-center gap-x-10 items-center"
-                // layoutId={`image-${active.title}-${id}`}
-              >
-                <iframe
+                  <motion.div
+                    className="flex justify-center gap-x-10 items-center"
+                    // layoutId={`image-${active.title}-${id}`}
+                  >
+                   <iframe
                   className="rounded-xl"
                   width="320"
                   height="220"
@@ -228,10 +234,31 @@ export function ExpandableCardDemo1() {
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                 ></iframe>
-              
-              </motion.div>
-              </>}
-              
+                    {/* <img
+                      className="rounded-xl"
+                      width="320"
+                      height="220"
+                      src="https://akmweb.youngjoygame.com/web/gms/image/5a16754b4ce0fc949eb3a926cd443c4a.jpg"
+                     
+                    ></img>
+                    <img
+                      className="rounded-xl"
+                      width="320"
+                      height="220"
+                      src="https://akmweb.youngjoygame.com/web/gms/image/4c0c21bf4d24f1acdb3ca116c15e0612.jpg"
+                     
+                    ></img>
+                    <img
+                      className="rounded-xl"
+                      width="320"
+                      height="220"
+                      src="https://akmweb.youngjoygame.com/web/gms/image/4e18b40d1bae4f7313ae9c9a4c3d38a1.jpg"
+                     
+                    ></img> */}
+                    
+                  </motion.div>
+                </>
+              )}
             </motion.div>
           </div>
         ) : null}
@@ -241,7 +268,7 @@ export function ExpandableCardDemo1() {
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
-            onClick={()=>handleOnlick(card)}
+            onClick={() => handleOnlick(card)}
             onHoverStart={() => setSmallIconActive(true)}
             onHoverEnd={() => setSmallIconActive(false)}
             className="p-8 flex md:flex-row justify-between gap-12 items-center  rounded-xl cursor-pointer ease-in-out	duration-300"
@@ -250,12 +277,12 @@ export function ExpandableCardDemo1() {
               <div className="">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
+                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left p-3 pl-10 tracking-[10px]"
                   initial="initial"
                   whileHover="hover"
                   whileTap="tap"
                   // onHoverEnd={() => console.log("Mouse left")}
-                 animate={smallIconActive ? 'active' : 'initial'}
+                  animate={smallIconActive ? "active" : "initial"}
                   variants={titleVariants}
                 >
                   {card.title}
@@ -284,7 +311,7 @@ export function ExpandableCardDemo1() {
             > */}
             {smallIconActive && (
               <motion.div
-                className="h-4 flex gap-8"
+                className="h-4 flex gap-8 items-center"
                 initial="hidden"
                 animate="visible"
                 exit="exit"
@@ -300,31 +327,30 @@ export function ExpandableCardDemo1() {
                   },
                 }}
               >
-                <motion.img
+                 <motion.img
                   src={'https://img.youtube.com/vi/6dEpL09xEMo/sddefault.jpg'}
                   alt=""
-                  className="override-img"
+                  className="override-img rounded-md overflow-hidden"
                   variants={imageVariants}
                 />
                 <motion.img
                   src={'https://img.youtube.com/vi/hobpDrungfc/sddefault.jpg'}
                   alt=""
-                  className="override-img"
+                  className="override-img rounded-md overflow-hidden"
                   variants={imageVariants}
                 />
                 <motion.img
                   src={'https://img.youtube.com/vi/2UNn8I6V8Fw/sddefault.jpg'}
                   alt=""
-                  className="override-img"
+                  className="override-img rounded-md overflow-hidden"
                   variants={imageVariants}
                 />
                 <motion.img
                   src={'https://img.youtube.com/vi/mshFLZ5cVdQ/sddefault.jpg'}
                   alt=""
-                  className="override-img"
+                  className="override-img rounded-md overflow-hidden"
                   variants={imageVariants}
                 />
-                
               </motion.div>
             )}
             {/* </motion.button> */}
@@ -371,7 +397,7 @@ export function ExpandableCardDemo1() {
 const cards = [
   {
     description: "Lana Del Rey",
-    title: "MOBILE lEGEND",
+    title: "FOR YOU",
     src: { img1 },
     ctaText: "Play",
     ctaLink: "https://ui.aceternity.com/templates",
@@ -388,90 +414,5 @@ const cards = [
       );
     },
   },
-  // {
-  //   description: "Babbu Maan",
-  //   title: "Mitran Di Chhatri",
-  //   src: {img2},
-  //   ctaText: "Play",
-  //   ctaLink: "https://ui.aceternity.com/templates",
-  //   content: () => {
-  //     return (
-  //       <p>
-  //         Babbu Maan, a legendary Punjabi singer, is renowned for his soulful
-  //         voice and profound lyrics that resonate deeply with his audience. Born
-  //         in the village of Khant Maanpur in Punjab, India, he has become a
-  //         cultural icon in the Punjabi music industry. <br /> <br /> His songs
-  //         often reflect the struggles and triumphs of everyday life, capturing
-  //         the essence of Punjabi culture and traditions. With a career spanning
-  //         over two decades, Babbu Maan has released numerous hit albums and
-  //         singles that have garnered him a massive fan following both in India
-  //         and abroad.
-  //       </p>
-  //     );
-  //   },
-  // },
-  // {
-  //   description: "Metallica",
-  //   title: "For Whom The Bell Tolls",
-  //   src: {img3},
-  //   ctaText: "Play",
-  //   ctaLink: "https://ui.aceternity.com/templates",
-  //   content: () => {
-  //     return (
-  //       <p>
-  //         Metallica, an iconic American heavy metal band, is renowned for their
-  //         powerful sound and intense performances that resonate deeply with
-  //         their audience. Formed in Los Angeles, California, they have become a
-  //         cultural icon in the heavy metal music industry. <br /> <br /> Their
-  //         songs often reflect themes of aggression, social issues, and personal
-  //         struggles, capturing the essence of the heavy metal genre. With a
-  //         career spanning over four decades, Metallica has released numerous hit
-  //         albums and singles that have garnered them a massive fan following
-  //         both in the United States and abroad.
-  //       </p>
-  //     );
-  //   },
-  // },
-  // {
-  //   description: "Led Zeppelin",
-  //   title: "Stairway To Heaven",
-  //   src: {img4},
-  //   ctaText: "Play",
-  //   ctaLink: "https://ui.aceternity.com/templates",
-  //   content: () => {
-  //     return (
-  //       <p>
-  //         Led Zeppelin, a legendary British rock band, is renowned for their
-  //         innovative sound and profound impact on the music industry. Formed in
-  //         London in 1968, they have become a cultural icon in the rock music
-  //         world. <br /> <br /> Their songs often reflect a blend of blues, hard
-  //         rock, and folk music, capturing the essence of the 1970s rock era.
-  //         With a career spanning over a decade, Led Zeppelin has released
-  //         numerous hit albums and singles that have garnered them a massive fan
-  //         following both in the United Kingdom and abroad.
-  //       </p>
-  //     );
-  //   },
-  // },
-  // {
-  //   description: "Mustafa Zahid",
-  //   title: "Toh Phir Aao",
-  //   src: {img5},
-  //   ctaText: "Play",
-  //   ctaLink: "https://ui.aceternity.com/templates",
-  //   content: () => {
-  //     return (
-  //       <p>
-  //         "Aawarapan", a Bollywood movie starring Emraan Hashmi, is renowned for
-  //         its intense storyline and powerful performances. Directed by Mohit
-  //         Suri, the film has become a significant work in the Indian film
-  //         industry. <br /> <br /> The movie explores themes of love, redemption,
-  //         and sacrifice, capturing the essence of human emotions and
-  //         relationships. With a gripping narrative and memorable music,
-  //         "Aawarapan" has garnered a massive fan following both in India and
-  //         abroad, solidifying Emraan Hashmi's status as a versatile actor.
-  //       </p>
-  //     );
-  //   },
-  // },
+  
 ];
