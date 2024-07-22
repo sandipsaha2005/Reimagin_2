@@ -15,19 +15,10 @@
     /* cursor: url('../public/cursor.png') 16 16, pointer; */
     /* cursor: url('../public/Selection.png') 16 16, text; */
   }
-  ::selection{
-    color: #0000ff;
-    /* text-shadow: 
-    0 0 5px var(--color-title),
-    0 0 10px var(--color-title),
-    0 0 20px var(--color-title),
-    0 0 40px var(--color-title),
-    0 0 80px var(--color-title),
-    0 0 90px var(--color-title),
-    0 0 100px var(--color-title),
-    0 0 120px var(--color-title),
-    0 0 140px var(--color-title); */
-  }
+  ::selection {
+    color: #000000;
+    background: #ff6f00; /* Bright Orange */
+}
 
   *,
   *::after,

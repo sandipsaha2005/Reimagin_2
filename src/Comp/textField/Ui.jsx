@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "../../utils/cn";
 
 export function PlaceholdersAndVanishInput({
@@ -10,6 +9,7 @@ export function PlaceholdersAndVanishInput({
   onSubmit,
 }) {
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
+  const [isTyping, setIsTyping] = useState(false);
 
   const intervalRef = useRef(null);
   const startAnimation = () => {
@@ -17,6 +17,7 @@ export function PlaceholdersAndVanishInput({
       setCurrentPlaceholder((prev) => (prev + 1) % placeholders.length);
     }, 3000);
   };
+
   const handleVisibilityChange = () => {
     if (document.visibilityState !== "visible" && intervalRef.current) {
       clearInterval(intervalRef.current); // Clear the interval when the tab is not visible
@@ -171,6 +172,12 @@ export function PlaceholdersAndVanishInput({
     onSubmit && onSubmit(e);
   };
 
+  const handleInputChange = (e) => {
+    setValue(e.target.value);
+    onChange && onChange(e);
+    setIsTyping(e.target.value.length > 0);
+  };
+
   return (
     <form
       className={cn(
@@ -187,12 +194,7 @@ export function PlaceholdersAndVanishInput({
         ref={canvasRef}
       />
       <input
-        onChange={(e) => {
-          if (!animating) {
-            setValue(e.target.value);
-            onChange && onChange(e);
-          }
-        }}
+        onChange={handleInputChange}
         onKeyDown={handleKeyDown}
         ref={inputRef}
         value={value}
@@ -242,29 +244,17 @@ export function PlaceholdersAndVanishInput({
 
       <div className="absolute inset-0 flex items-center rounded-full pointer-events-none">
         <AnimatePresence mode="wait">
-          {!value && (
-            <motion.p
-              initial={{
-                y: 5,
-                opacity: 0,
-              }}
-              key={`current-placeholder-${currentPlaceholder}`}
-              animate={{
-                y: 0,
-                opacity: 1,
-              }}
-              exit={{
-                y: -15,
-                opacity: 0,
-              }}
-              transition={{
-                duration: 0.3,
-                ease: "linear",
-              }}
-              className="dark:text-zinc-500 text-sm sm:text-base font-normal text-neutral-500 pl-4 sm:pl-12 text-left w-[calc(100%-2rem)] truncate"
+          {!value && !isTyping && (
+            <motion.div
+              key={currentPlaceholder}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.5 }}
+              className="absolute flex items-center w-full h-full text-gray-400 dark:text-gray-500 z-10 pl-4 sm:pl-10 pr-20"
             >
               {placeholders[currentPlaceholder]}
-            </motion.p>
+            </motion.div>
           )}
         </AnimatePresence>
       </div>

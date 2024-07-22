@@ -22,8 +22,6 @@ export function TracingBeamDemo() {
     {/* <h1 className='p-12 tracking-widest font-[Steelar] font-bold text-6xl flex justify-center items-center text-[#FFCC00]'>THE 7 KINGDOMS</h1> */}
     <GoogleGeminiEffectDemo/>
     </div>
-    
-
     <TracingBeam className="px-6">
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
 
@@ -59,6 +57,7 @@ export function TracingBeamDemo() {
         ))}
       </div>
     </TracingBeam>
+
     </>
   );
 }
