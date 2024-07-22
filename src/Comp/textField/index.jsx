@@ -13,7 +13,7 @@ export function PlaceholdersAndVanishInputDemo() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [popoverContent, setPopoverContent] = useState("");
   const [open, setOpen] = useState(false);
-
+  const [alphabet,setAlphabet]=useState('')
   const placeholders = [
     "What are the Characters that starts with my name ?",
     "Who is Tyler Durden?",
@@ -25,13 +25,13 @@ export function PlaceholdersAndVanishInputDemo() {
   const handleChange = (e) => {
     const value = e.target.value;
     const lastChar = value.slice(-1);
+    setAlphabet(e.target.value);
     if (lastChar === ' ' || e.target.value === '') {
       return;
     }
     setPopoverContent(value);
     setAnchorEl(e.currentTarget);
     setOpen(true);
-
     // Close the popover after 100 milliseconds
     setTimeout(() => {
       setOpen(false);
@@ -52,8 +52,8 @@ export function PlaceholdersAndVanishInputDemo() {
   const id = open ? 'simple-popover' : undefined;
 
   return (
-    <div className="h-[40rem] flex flex-col justify-center items-center px-4">
-      <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-black">
+    <div className="h-[20rem] flex flex-col justify-center items-center px-4">
+      <h2 className="mb-2 sm:mb-2 text-xl text-center sm:text-5xl dark:text-white text-black">
         Just Enter Your Name
       </h2>
       <PlaceholdersAndVanishInput
@@ -61,7 +61,7 @@ export function PlaceholdersAndVanishInputDemo() {
         onChange={handleChange}
         onSubmit={handleSubmit}
       />
-      <PopupComponent onClose={handleClose} open={open} content={popoverContent.slice(-1)}/>
+      <PopupComponent onClose={handleClose} open={open} content={popoverContent.slice(-1)} alp={alphabet}/>
       
 
     </div>

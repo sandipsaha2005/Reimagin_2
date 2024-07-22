@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
@@ -36,11 +36,11 @@ import Wanwan from './images/Wanwan.webp'
 import XBorg from './images/X.Borg.webp'
 import Yve from './images/Yve.webp'
 import Zhask from './images/Zhask.webp'
-const PopupComponent = ({ onClose, onConfirm, open ,content}) => {
+const PopupComponent = ({ onClose, onConfirm, open ,content,alp}) => {
     let img;
     let char;
     let c=content.toLowerCase();
-    
+    const [histArr,setHistArr]=useState([]);
     let Herotype={
         f:'Fighter',
         a:'Assassin',
@@ -293,7 +293,9 @@ const PopupComponent = ({ onClose, onConfirm, open ,content}) => {
         char='Zhask'
     }
     
-
+    // console.log(typeof(alp.trim()));
+    console.log(alp.length);
+    
   return (
 
     <Dialog open={open}  onClose={onClose} 
