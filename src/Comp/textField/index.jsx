@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { PlaceholdersAndVanishInput } from "./Ui";
 import { Popover, Typography } from "@mui/material";
-
 import Slide from '@mui/material/Slide';
-import PopupComponent from '../popOver/index'
+import PopupComponent from '../popOver/index';
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -13,29 +13,42 @@ export function PlaceholdersAndVanishInputDemo() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [popoverContent, setPopoverContent] = useState("");
   const [open, setOpen] = useState(false);
+  const [prevValue, setPrevValue] = useState("");
 
   const placeholders = [
-    "What are the Characters that starts with my name ?",
-    "Who is Tyler Durden?",
-    "Where is Andrew Laeddis Hiding?",
-    "Write a Javascript method to reverse a string",
-    "How to assemble your own PC?",
+    "Who is the most powerful hero in Mobile Legends?",
+    "Effective strategies for late-game team fights.",
+    "How to counter Aldous in Mobile Legends?",
+    "Top tank heroes for defensive plays.",
+    "Which hero has the highest win rate?",
+    "Optimal build for high-damage heroes.",
+    "What is the best build for Gusion?",
+    "Latest patch notes and hero adjustments.",
   ];
-
+  
   const handleChange = (e) => {
     const value = e.target.value;
     const lastChar = value.slice(-1);
-    if (lastChar === ' ' || e.target.value === '') {
+
+    // Check if the current input value is shorter than the previous value (indicating a deletion)
+    if (value.length < prevValue.length) {
+      setOpen(false);
+      setPrevValue(value);
+      return;
+    }
+
+    if (lastChar === ' ' || value === '') {
       return;
     }
     setPopoverContent(value);
     setAnchorEl(e.currentTarget);
     setOpen(true);
+    setPrevValue(value);
 
     // Close the popover after 100 milliseconds
     setTimeout(() => {
       setOpen(false);
-    }, 400);
+    }, 600);
   };
 
   const handleClose = () => {
@@ -44,8 +57,7 @@ export function PlaceholdersAndVanishInputDemo() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    setIsPopupOpen(true);
+    // setIsPopupOpen(true);
     console.log("submitted");
   };
 
@@ -61,9 +73,7 @@ export function PlaceholdersAndVanishInputDemo() {
         onChange={handleChange}
         onSubmit={handleSubmit}
       />
-      <PopupComponent onClose={handleClose} open={open} content={popoverContent.slice(-1)}/>
-      
-
+      <PopupComponent onClose={handleClose} open={open} content={popoverContent.slice(-1)} />
     </div>
   );
 }

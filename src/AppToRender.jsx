@@ -43,8 +43,8 @@ function AppToRender() {
       <HeroParallaxDemo />
       <ScrollBasedVelocityDemo />
       <MenuMain1 />
-      <PlaceholdersAndVanishInputDemo/>
       <TracingBeamDemo />
+      <PlaceholdersAndVanishInputDemo/>
       <ScrollThreeD />
       <MarqueeDemo />
       <MenuMain />

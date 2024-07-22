@@ -7,8 +7,17 @@ import Button from '@mui/material/Button';
 import {Card, CardContent} from '@mui/material'
 import Slide from '@mui/material/Slide';
 
+const directions = ['left', 'right', 'up', 'down'];
+
+const getRandomDirection = () => {
+  const randomIndex = Math.floor(Math.random() * directions.length);
+  return directions[randomIndex];
+};
+
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
+  const direction = getRandomDirection();
+  
+  return <Slide direction={direction} ref={ref} {...props} />;
 });
 import Aldous from './images/Hero641-portrait.webp'
 import Balmond from './images/Balmond.webp'
@@ -26,7 +35,7 @@ import Miya from './images/Miya.webp'
 import Nana from './images/Nana.webp'
 import Odette from './images/Odette.webp'
 import Pharsa from './images/Pharsa.webp'
-import Paquito from './images/Paquito.webp'
+import Paquito from './images/Paquito.png'
 import Ruby from './images/Ruby.webp'
 import Sun from './images/Sun.webp'
 import Tigreal from './images/Tigreal.webp'
@@ -261,6 +270,10 @@ const PopupComponent = ({ onClose, onConfirm, open ,content}) => {
     }else if(c=='p'){
         img=Pharsa;
         char='Pharsa'
+    }
+    else if(c=='q'){
+        img=Paquito;
+        char='Paquito'
     }else if(c=='r'){
         img=Ruby;
         char='Ruby'
@@ -293,31 +306,59 @@ const PopupComponent = ({ onClose, onConfirm, open ,content}) => {
 
   return (
 
-    <Dialog open={open}  onClose={onClose} 
-        
-        TransitionComponent={Transition}
-        keepMounted
-        // onClose={handleClose}
-        aria-describedby="alert-dialog-slide-description"
+    <Dialog
+      open={open}
+      onClose={onClose}
+      TransitionComponent={Transition}
+      aria-describedby="alert-dialog-slide-description"
+      sx={{
+        "& .MuiDialog-paper": {
+          width: "50%", 
+          hight: "60%",
+          maxHeight: "580px",
+          maxWidth: "500px", // Set a maximum width
+          borderRadius: "16px", // Rounded corners
+          padding: "24px", // Padding around the content
+          backgroundColor: "#27272a",
+          textTransform: 'uppercase',
+          
+        },
+      }}
+    >
+      <DialogTitle
         sx={{
-          backgroundColor:'rgba(255,255,255,0)'
-        }}>
-      <DialogTitle >{char}</DialogTitle>
-      <DialogContent sx={{fontSize:'25px',align:'center'}}>
+          fontSize: "3rem", // Title font size
+          fontWeight: "bold",
+          textAlign: "center",
+          fontFamily: "orbitron",
+          color: "#FFCC00"
+        }}
+      >
+        {char}
+      </DialogTitle>
+      {/* <DialogContent
+        sx={{
+          fontSize: "1rem", // Content font size
+          textAlign: "center",
+          paddingTop: "16px", // Space between title and content
+          color: "#FFFFFF",
+        }}
+      >
         {content}
-      </DialogContent>
-      <img src={img} alt="" />
-      {/* <DialogActions sx={{width:'100',display:'flex',justifyContent:'space-evenly'}}>
-        <Button onClick={onClose}  variant='contained' color="primary" sx={{width:'45%'}}>
-          Cancel
-        </Button>
-        <Button onClick={onConfirm} variant='contained' color="error" sx={{width:'45%'}}>
-          Delete
-        </Button>
-      </DialogActions> */}
+      </DialogContent> */}
+      <img
+        src={img}
+        alt="dialog image"
+        style={{
+          display: "block",
+          margin: "16px auto", // Center the image horizontally
+          maxWidth: "100%", // Ensure image does not overflow
+          borderRadius: "15px", // Rounded corners for the image
+          
+        }}
+      />
+
     </Dialog>
-
-
   );
 };
 
