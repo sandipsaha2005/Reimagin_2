@@ -1,7 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { CheckIcon, ChevronRightIcon } from "lucide-react";
+import { FaApple } from "react-icons/fa";
+import { DiAndroid } from "react-icons/di";
 import AnimatedSubscribeButton from '../Comp/downloadButton/ui';
 function Footer() {
+ const [activate1,setActivate1] = useState(0)
+ const [activate2,setActivate2] = useState(0)
+
   return (
     <footer className="bg-zinc-900" id='footer'>
   <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pt-24">
@@ -16,17 +21,39 @@ function Footer() {
       <span className='text-[#FFCC00]'>© Moonton. </span>
        All rights reserved
       </p>
-<div className='flex items-center justify-center mt-3'>
+<div className='flex items-center justify-center mt-3 gap-4'>
 
 
-    <AnimatedSubscribeButton
+<AnimatedSubscribeButton
       buttonColor="#000000"
       buttonTextColor="#ffffff"
-      subscribeStatus={false}
+      subscribeStatus={true}
+      onclick={()=>{
+        console.log('hi');
+      }}
       initialText={
         <span className="group inline-flex items-center">
+          <FaApple className='mr-2 text-xl transition-transform duration-300 ease-in-out group-hover:scale-150'/>
           Download{" "}
-          <ChevronRightIcon className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          <ChevronRightIcon className="ml-1 h-5 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+        </span>
+      }
+      changeText={
+        <span className="group inline-flex items-center">
+          <CheckIcon className="mr-2 h-4 w-4" />
+          Complete{" "}
+        </span>
+      }
+    />
+<AnimatedSubscribeButton
+      buttonColor="#000000"
+      buttonTextColor="#ffffff"
+      subscribeStatus={true}
+      initialText={
+        <span className="group inline-flex items-center">
+          <DiAndroid className='mr-2 text-xl transition-transform duration-300 ease-in-out group-hover:scale-150'/>
+          Download{" "}
+          <ChevronRightIcon className="ml-1 h-5 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       }
       changeText={
