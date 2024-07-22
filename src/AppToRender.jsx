@@ -11,7 +11,7 @@ import PreLoader from './Comp/preLoader/Index'
 import VideoPlayer  from './Comp/preLoader/VideoPlayer'
 import OpenVideo from './assets/video/PreLoadder.mp4'
 // import TrailDemo from './Comp/BasicTrail'
-
+import  NavbarDemo  from './organs/Navbar'
 import {IconCloudDemo} from './Comp/circulCloud'
 import { ScrollBasedVelocityDemo } from './Comp/textAnimation'
 import { MarqueeDemo } from './Comp/Marquee/app'
@@ -21,6 +21,9 @@ import { HeroParallaxDemo } from './Comp/HeroParallex/App'
 import MenuMain1 from './Comp/menuGridImg/app'
 import MenuMain from './Comp/menuGrid/app'
 import { TracingBeamDemo } from './Comp/TraceBeam/App'
+import Reflect from './Comp/reflectionComp'
+import ParralexApp from './Comp/parallex/index'
+import { PlaceholdersAndVanishInputDemo } from './Comp/textField'
 // import { ThreeDCardDemo } from './Comp/threeDCard/index'
 // import ScrollThreeD './Comp/'
 function AppToRender() {
@@ -32,18 +35,23 @@ function AppToRender() {
 
   return (
     <>
+    <NavbarDemo/>
       {/* <Sticky/> */}
       {/* <GlobeDemo/> */}
       {/* <TrailDemo/> */}
       {/* <IconCloudDemo/> */}
-      <HeroParallaxDemo/>
+      {/* <HeroParallaxDemo/>
       <MenuMain1/>
       <ScrollBasedVelocityDemo/>
       <TracingBeamDemo/>
       <ScrollThreeD/>
       <MarqueeDemo/>
       <MenuMain/>
+       */}
+      {/* <Reflect/> */}
+      {/* <ParralexApp/> */}
       <Footer/>
+      <PlaceholdersAndVanishInputDemo/>
     </>
   )
 }
