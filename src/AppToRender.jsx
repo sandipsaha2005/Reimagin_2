@@ -21,6 +21,7 @@ import { HeroParallaxDemo } from './Comp/HeroParallex/App'
 import MenuMain1 from './Comp/menuGridImg/app'
 import MenuMain from './Comp/menuGrid/app'
 import { TracingBeamDemo } from './Comp/TraceBeam/App'
+import Nav from './Comp/NavBar/app'
 // import { ThreeDCardDemo } from './Comp/threeDCard/index'
 // import ScrollThreeD './Comp/'
 function AppToRender() {
@@ -36,6 +37,7 @@ function AppToRender() {
       {/* <GlobeDemo/> */}
       {/* <TrailDemo/> */}
       {/* <IconCloudDemo/> */}
+      <Nav/>
       <HeroParallaxDemo/>
       <ScrollBasedVelocityDemo/>
       <MenuMain1/>
