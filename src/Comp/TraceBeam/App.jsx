@@ -12,12 +12,21 @@ import North from "../../assets/map/northan-vale.jpg";
 import Barren from "../../assets/map/the-barren-lands.jpg";
 import Vonetis from "../../assets/map/vonetis-sea.jpg";
 import Cadia from "../../assets/map/cadia-riverland.jpg";
-import { ThreeDCardDemo} from '../threeDCard/index'
+import { ThreeDCardDemo } from "../threeDCard/index";
 import shadows from "@mui/material/styles/shadows";
+import { GoogleGeminiEffectDemo } from "../GeminiEffect/App";
 export function TracingBeamDemo() {
   return (
+    <>
+    <div className=''>
+    {/* <h1 className='p-12 tracking-widest font-[Steelar] font-bold text-6xl flex justify-center items-center text-[#FFCC00]'>THE 7 KINGDOMS</h1> */}
+    <GoogleGeminiEffectDemo/>
+    </div>
+    
+
     <TracingBeam className="px-6">
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+
         {dummyContent.map((item, index) => (
           // <div key={`content-${index}`} className="mb-10">
           //   {/* <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
@@ -39,16 +48,24 @@ export function TracingBeamDemo() {
           //     {item.description}
           //   </div>
           // </div>
-          <ThreeDCardDemo src={item.image} title={item.title} desc={item.description} bg={item.bg} shadow={item.shadow} key={index}/>
+          <ThreeDCardDemo
+            src={item.image}
+            title={item.title}
+            desc={item.description}
+            bg={item.bg}
+            shadow={item.shadow}
+            key={index}
+          />
         ))}
       </div>
     </TracingBeam>
+    </>
   );
 }
 
 const dummyContent = [
   {
-    title: "LAND OF DAWN ( 7 KINGDOM)",
+    title: "LAND OF DAWN",
     bg: "text-[#B8860B]",
     shadow: "hover:shadow-[#B8860B]/[0.6]",
     description: (
@@ -165,9 +182,8 @@ const dummyContent = [
     description: (
       <>
         <p>
-           An island continent that lies across the sea
-          from the main continent of Dawn. A mystical
-          land to the far east that has given rise to many
+          An island continent that lies across the sea from the main continent
+          of Dawn. A mystical land to the far east that has given rise to many
           heroic warriors and legendary tales.
         </p>
       </>
