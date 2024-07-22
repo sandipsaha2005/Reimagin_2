@@ -43,12 +43,12 @@ function AppToRender() {
       <HeroParallaxDemo />
       <ScrollBasedVelocityDemo />
       <MenuMain1 />
+      <PlaceholdersAndVanishInputDemo/>
       <TracingBeamDemo />
       <ScrollThreeD />
       <MarqueeDemo />
       <MenuMain />
       <Footer />
-      <PlaceholdersAndVanishInputDemo/>
     </>
   );
 }

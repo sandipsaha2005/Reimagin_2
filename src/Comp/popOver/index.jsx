@@ -26,6 +26,7 @@ import Miya from './images/Miya.webp'
 import Nana from './images/Nana.webp'
 import Odette from './images/Odette.webp'
 import Pharsa from './images/Pharsa.webp'
+import Paquito from './images/Paquito.webp'
 import Ruby from './images/Ruby.webp'
 import Sun from './images/Sun.webp'
 import Tigreal from './images/Tigreal.webp'
@@ -266,9 +267,6 @@ const PopupComponent = ({ onClose, onConfirm, open ,content}) => {
     }else if(c=='s'){
         img=Sun;
         char='Sun'
-    }else if(c=='r'){
-        img=Ruby;
-        char='Ruby'
     }else if(c=='t'){
         img=Tigreal;
         char='Tigreal'
