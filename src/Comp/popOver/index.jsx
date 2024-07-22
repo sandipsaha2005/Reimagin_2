@@ -10,6 +10,7 @@ import Slide from '@mui/material/Slide';
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
+import Paquito from './images/Paquito.webp'
 import Aldous from './images/Hero641-portrait.webp'
 import Balmond from './images/Balmond.webp'
 import Chou from './images/Chou.webp'
