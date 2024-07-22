@@ -39,16 +39,177 @@ const PopupComponent = ({ onClose, onConfirm, open ,content}) => {
     let img;
     let char;
     let c=content.toLowerCase();
+    
+    let Herotype={
+        f:'Fighter',
+        a:'Assassin',
+        m:'Marksman',
+        g:'Mage',
+        t:'Tank',
+        s:'Support',
+    }
 
     let arrObj=[
         {
             src:Aldous,
             name:'Aldous',
-            type:'Fighter',
-            desc:'Something'
+            type:Herotype.f,
+            desc:'The guardian of the Minoan Maze.'
+        },
+        {
+            src:Balmond,
+            name:'Balmond',
+            type:Herotype.f,
+            desc:'The leader of the Orc Legion.'
+        },
+        {
+            src:Chou,
+            name:'Chou',
+            type:Herotype.f,
+            desc:'A talented fighter with a heart of chivalry.'
+        },
+        {
+            src:Diggie,
+            name:'Diggie',
+            type:Herotype.s,
+            desc:'The owl scholar who can control time.'
+        },
+        {
+            src:Estes,
+            name:'Estes',
+            type:Herotype.s,
+            desc:'Elf King who rules the Moon Elves.'
+        },
+        {
+            src:Fanny,
+            name:'Fanny',
+            type:Herotype.a,
+            desc:'A blade dancer in the battlefield.'
+        },
+        {
+            src:Gusion,
+            name:'Gusion',
+            type:Herotype.a,
+            desc:'Rebellious son of House Paxley.'
+        },
+        {
+            src:Harley,
+            name:'Harley',
+            type:Herotype.a,
+            desc:'The young mage whose powers awakened once thrust into danger.'
+        },
+        {
+            src:Irithel,
+            name:'Irithel',
+            type:Herotype.m,
+            desc:'Forest hunter with a Smilodon.'
+        },
+        {
+            src:Johnson,
+            name:'Johnson',
+            type:Herotype.t,
+            desc:'A super cyborg who can transform into a car and lead his teammates into battle.'
+        },
+        {
+            src:Kagura,
+            name:'Kagura',
+            type:Herotype.g,
+            desc:'A genius Onmyouji Master that inherited the ancestral treasure Seimei Umbrella.'
+        },
+        {
+            src:Layla,
+            name:'Layla',
+            type:Herotype.m,
+            desc:'The backbone of the Eruditio Rangers who is also known as the Shining Star.'
+        },
+        {
+            src:Miya,
+            name:'Miya',
+            type:Herotype.m,
+            desc:'The Priestess of the Moon and protector of the Moonlit Forest.'
+        },
+        {
+            src:Nana,
+            name:'Nana',
+            type:Herotype.g,
+            desc:'Little Leonin with no worries.'
+        },
+        {
+            src:Odette,
+            name:'Odette',
+            type:Herotype.g,
+            desc:'Innocent princess that grew up in the Swan Castle and genius mage that excels in sword.'
+        },
+        {
+            src:Pharsa,
+            name:'Pharsa',
+            type:Herotype.g,
+            desc:'Crow Princess of Askati Forest.'
+        },
+        {
+            src:Paquito,
+            name:'Paquito',
+            type:Herotype.f,
+            desc:'The hero who uses his two fists to protect hope and love.'
+        },
+        {
+            src:Ruby,
+            name:'Ruby',
+            type:Herotype.f,
+            desc:'A girl who grew up with Roger help.'
+        },
+        {
+            src:Sun,
+            name:'Sun',
+            type:Herotype.f,
+            desc:'The immortal Monkey King, resolute and unyielding like the mountain that bore him.'
+        },
+        {
+            src:Tigreal,
+            name:'Tigreal',
+            type:Herotype.t,
+            desc:'Leader of the Light Order, guardian of the Moniyan Empire.'
+        },
+        {
+            src:Uranus,
+            name:'Uranus',
+            type:Herotype.t,
+            desc:'Guardian made from lightning and air, guards the Celestial Palace.'
+        },
+        {
+            src:Vale,
+            name:'Vale',
+            type:Herotype.g,
+            desc:'Heir to Wind Fort, wind mage.'
+        },
+        {
+            src:Wanwan,
+            name:'Wanwan',
+            type:Herotype.m,
+            desc:'The Agile Tiger of the Oriental Fighters and a lively young girl.'
+        },
+        {
+            src:XBorg,
+            name:'XBorg',
+            type:Herotype.f,
+            desc:'An uncontrollable flame that determined to take revenge against Eruditio.'
+        },
+        {
+            src:Yve,
+            name:'Yve',
+            type:Herotype.g,
+            desc:'Keeper of the equilibrium of the universe.'
+        },
+        {
+            src:Zhask,
+            name:'Zhask',
+            type:Herotype.g,
+            desc:'King of the Swarm who disrupts the balance of the universe.'
         },
         
     ]
+
+
     
 
     if(c=='a'){

@@ -22,6 +22,8 @@ import MenuMain1 from "./Comp/menuGridImg/app";
 import MenuMain from "./Comp/menuGrid/app";
 import { TracingBeamDemo } from "./Comp/TraceBeam/App";
 import Nav from "./Comp/NavBar/app";
+import { PlaceholdersAndVanishInputDemo } from './Comp/textField'
+
 // import { ThreeDCardDemo } from './Comp/threeDCard/index'
 // import ScrollThreeD './Comp/'
 function AppToRender() {
@@ -46,6 +48,7 @@ function AppToRender() {
       <MarqueeDemo />
       <MenuMain />
       <Footer />
+      <PlaceholdersAndVanishInputDemo/>
     </>
   );
 }
