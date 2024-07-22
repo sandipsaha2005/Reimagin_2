@@ -46,8 +46,8 @@ const Menu = () => {
       <MenuItem
         name="MORE"
         images={[
-          "https://wallpapers.com/images/featured/mobile-legends-v0u46grjbqc6h9ga.jpg",
-          "https://wallpapers.com/images/hd/mobile-legends-background-gv1k79yv1gv6hqe4.jpg",
+          "https://www.bhmpics.com/downloads/mobile-legends-2020-Wallpapers/11.wallpaper-mobile-legend-hd.jpg",
+          "https://wallpapers.com/images/hd/mobile-legends-background-mqjdqd30a1rd0gox.jpg",
         ]}
       />
     </nav>
