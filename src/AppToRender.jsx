@@ -34,21 +34,21 @@ function AppToRender() {
 
   return (
     <>
-      {/* <NavbarDemo /> */}
+      <NavbarDemo />
       {/* <Sticky/> */}
       {/* <GlobeDemo/> */}
       {/* <TrailDemo/> */}
       {/* <IconCloudDemo/> */}
-        {/* <Nav />
-      <HeroParallaxDemo />
-      <ScrollBasedVelocityDemo />
-      <MenuMain1 />
-      
-      <TracingBeamDemo />
-      
-      <ScrollThreeD />
-      <MarqueeDemo />
-      <MenuMain /> */}
+        {/* <Nav /> */}
+       <HeroParallaxDemo />
+       <ScrollBasedVelocityDemo />
+       <MenuMain1 />
+  
+       <TracingBeamDemo />
+  
+       <ScrollThreeD />
+       <MarqueeDemo />
+       <MenuMain /> 
        <Footer />  
       <PlaceholdersAndVanishInputDemo/>
     </>
