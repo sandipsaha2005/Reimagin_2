@@ -28,10 +28,11 @@ import Tigreal from './images/Tigreal.webp'
 import Uranus from './images/Uranus.webp'
 import Vale from './images/Vale.webp'
 import Wanwan from './images/Wanwan.webp'
-import XBorg from './images/X.Borg.webp'
+import XBorg from './images/XBorg.webp'
 import Yve from './images/Yve.webp'
 import Zhask from './images/Zhask.webp'
 import { ThreeDCardDemo } from "../threeDCard/index2";
+
  
 
 //src={item.image}
@@ -283,6 +284,8 @@ function getMatchingCharacter(image) {
 // let image = ['a', 'c', 'e', 'g', 'z'];
 // let matchingCharacters = getMatchingCharacter(image);
   const handleChange = (e) => {
+    const inputValue = event.target.value;
+    if (/^[a-zA-Z]*$/.test(inputValue)) {
     setImage(null)
     const value = e.target.value;
     const lastChar = value.slice(-1);
@@ -293,7 +296,9 @@ function getMatchingCharacter(image) {
       setPrevValue(value);
       return;
     }
-
+    
+      
+    
     if (lastChar === " " || value === "") {
       return;
     }
@@ -306,7 +311,7 @@ function getMatchingCharacter(image) {
     setTimeout(() => {
       setOpen(false);
     }, 600);
-  };
+  }};
 
   const handleClose = () => {
     setOpen(false);
@@ -324,12 +329,15 @@ function getMatchingCharacter(image) {
   };
   // console.log(image);
   const id = open ? "simple-popover" : undefined;
-
+ const getName=(name)=>{
+  return name.split('/').at(-1).split('.').at(0); // this.png
+ }
   return (
     <div className="h-[40rem] flex flex-col justify-evenly items-center px-4">
       <div className="flex gap-2 flex-wrap">
       {state &&  state.map((elem,index)=>(
          elem != ' ' && (
+          <div className="flex flex-col">
           <img 
               key={index}
               src={obj1[elem.toLowerCase()]} 
@@ -338,6 +346,9 @@ function getMatchingCharacter(image) {
               width='100px'
               style={{borderRadius:'10px'}}
           />
+          {/* <p>{arrObj.find((elem)=> elem.src == image).name}</p> */}
+          {getName(obj1[elem.toLowerCase().split('/')])}
+          </div>
       )  
       ))}
       {image && (

@@ -23,13 +23,14 @@ const colors = [
   "#262626", 
   "#1f1f1f", 
   "#141414" 
-  ];
+];
 
 circles.forEach(function (circle, index) {
   circle.x = 0;
   circle.y = 0;
   circle.style.backgroundColor = colors[index % colors.length];
   circle.style.opacity = 1; // Initialize opacity to 1
+  // console.log(`Circle ${index} initialized`);
 });
 
 let mouseStoppedTimeout;
@@ -40,11 +41,13 @@ window.addEventListener("mousemove", function (e) {
 
   clearTimeout(mouseStoppedTimeout);
   showCircles();
+  // console.log(`Mouse moved to: (${coords.x}, ${coords.y})`);
 
   mouseStoppedTimeout = setTimeout(hideCirclesSmoothly, 100); // Hide circles after 2 seconds of no movement
 });
 
 function hideCirclesSmoothly() {
+  // console.log("Hiding circles");
   circles.forEach(circle => {
     let opacity = parseFloat(circle.style.opacity);
     const fadeOut = setInterval(() => {
@@ -59,6 +62,7 @@ function hideCirclesSmoothly() {
 }
 
 function showCircles() {
+  // console.log("Showing circles");
   circles.forEach(circle => {
     circle.style.opacity = 1; // Show circles by setting opacity to 1
   });
