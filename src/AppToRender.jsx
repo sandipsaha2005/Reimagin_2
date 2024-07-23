@@ -34,7 +34,7 @@ function AppToRender() {
 
   return (
     <>
-      {/* <NavbarDemo />
+      <NavbarDemo />
 
        <HeroParallaxDemo />
        <ScrollBasedVelocityDemo />
@@ -44,7 +44,7 @@ function AppToRender() {
   
        <ScrollThreeD />
        <MarqueeDemo />
-       <MenuMain />  */}
+       <MenuMain /> 
       <PlaceholdersAndVanishInputDemo/>
        <Footer />  
     </>
