@@ -49,15 +49,14 @@ export function PlaceholdersAndVanishInputDemo() {
   const [state,setState]=useState('')
   const [image,setImage]=useState(null)
   const placeholders = [
-    "Who is the most powerful hero in Mobile Legends?",
-    "Effective strategies for late-game team fights.",
-    "How to counter Aldous in Mobile Legends?",
-    "Top tank heroes for defensive plays.",
-    "Which hero has the highest win rate?",
-    "Optimal build for high-damage heroes.",
-    "What is the best build for Gusion?",
-    "Latest patch notes and hero adjustments.",
-  ];
+    "How to counter Aldous in Mobile Legends? 🔄",
+    "Top tank heroes for defensive plays. 🛡️",
+    "Which hero has the highest win rate? 🏆",
+    "Optimal build for high-damage heroes. 💥",
+    "What is the best build for Gusion? 🗡️",
+    "Latest patch notes and hero adjustments. 📝",
+];
+
   let Herotype={
     f:'Fighter',
     a:'Assassin',
@@ -84,6 +83,7 @@ export function PlaceholdersAndVanishInputDemo() {
     n:Nana,
     o:Odette,
     p:Pharsa,
+    q:Paquito,
     r:Ruby,
     s:Sun,
     t:Tigreal,
@@ -266,7 +266,7 @@ arrObj.forEach(hero => {
   };
 });
 
-console.log(heroObjects.Aldous);
+// console.log(heroObjects.Aldous);
 
 function getMatchingCharacter(image) {
   let result = [];
@@ -320,45 +320,49 @@ function getMatchingCharacter(image) {
 
     setImage(matchingCharacters[0])
 
-    console.log("submitted");
+    // console.log("submitted");
   };
   // console.log(image);
   const id = open ? "simple-popover" : undefined;
 
   return (
     <div className="h-[40rem] flex flex-col justify-evenly items-center px-4">
-      <div className="flex gap-2 flex-wrap">
+      <div className="flex gap-3 flex-wrap">
+ 
       {state &&  state.map((elem,index)=>(
          elem != ' ' && (
+
           <img 
               key={index}
               src={obj1[elem.toLowerCase()]} 
               alt={elem} 
-              height='200px'
+              height='150px'
               width='100px'
               style={{borderRadius:'10px'}}
           />
+          
       )  
+      
       ))}
       {image && (
         <div className="flex justify-center gap-4">
-        <img src={image} alt="Image" height='300px'
+        <img src={image} alt="Image" height='250px'
         width='200px' style={{borderRadius:'20px'}}/>
         {/* <p>{heroObjects.image.name}</p> */}
         <div className="w-32">
-        <p>{arrObj.find((elem)=> elem.src == image).name}</p>
+        <p><span className="text-[#FFCC00] font-[Steelar]">Name</span><br />{arrObj.find((elem)=> elem.src == image).name}</p>
         <br />
         <hr />
-        <p>{arrObj.find((elem)=> elem.src == image).type}</p>
+        <p><span className="text-[#FFCC00] font-[Steelar]">Type</span><br />{arrObj.find((elem)=> elem.src == image).type}</p>
         <br />
         <hr />
-        <p className="wrap">{arrObj.find((elem)=> elem.src == image).desc}</p>
+        <p className="wrap"><span className="text-[#FFCC00] font-[Steelar]">Description</span><br />{arrObj.find((elem)=> elem.src == image).desc}</p>
         </div>
         </div>
-      )}
+      )} 
       </div>
-      <h2 className="mb-2 sm:mb-2 text-xl text-center sm:text-5xl dark:text-white text-black">
-        Just Enter Your Name
+      <h2 className="text-xl text-center sm:text-4xl dark:text-white text-black">
+      ✨ Enter Your Name and Press Enter to Witness the Magic!  🪄
       </h2>
       <PlaceholdersAndVanishInput
         placeholders={placeholders}

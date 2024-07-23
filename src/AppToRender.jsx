@@ -43,8 +43,8 @@ function AppToRender() {
        <TracingBeamDemo />
   
        <ScrollThreeD />
-       <MarqueeDemo />
-       <MenuMain />  */}
+       <MarqueeDemo /> */}
+       <MenuMain /> 
       <PlaceholdersAndVanishInputDemo/>
        <Footer />  
     </>
