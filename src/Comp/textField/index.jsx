@@ -111,6 +111,7 @@ export function PlaceholdersAndVanishInputDemo() {
     n: "Nana",
     o: "Odette",
     p: "Pharsa",
+    q: "Paquito",
     r: "Ruby",
     s: "Sun",
     t: "Tigreal",
@@ -363,6 +364,7 @@ export function PlaceholdersAndVanishInputDemo() {
           state.map(
             (elem, index) =>
               elem != " " && (
+                <div className="flex flex-col justify-center items-center">
                 <img
                   key={index}
                   src={obj1[elem.toLowerCase()]}
@@ -371,6 +373,9 @@ export function PlaceholdersAndVanishInputDemo() {
                   width="100px"
                   style={{ borderRadius: "10px" }}
                 />
+                <p className="text-zinc-500">{getName(elem)}</p>
+
+</div>
               )
           )}
         {image && (
