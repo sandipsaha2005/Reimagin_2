@@ -46,7 +46,7 @@ function NavbarDemo() {
     setState({ ...state, [anchor]: open });
   };
   return (
-    <div className="z-[1000]  fixed top-5 right-5">
+    <div className="z-[100]  fixed top-5 right-5 ">
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>
@@ -62,6 +62,7 @@ function NavbarDemo() {
               fontSize="large"
               sx={{ color: "#f2e8dc" }}
             />{" "} */}
+
           </Button>
           <Drawer
             anchor={anchor}
@@ -88,6 +89,7 @@ function NavbarDemo() {
                   color: "black",
                 }}
               /> */}
+
               <lord-icon
                   src="https://cdn.lordicon.com/nqtddedc.json"
                   trigger="loop-on-hover"

@@ -95,6 +95,35 @@ export function PlaceholdersAndVanishInputDemo() {
     y:Yve,
     z:Zhask,
   }
+  
+  let getname={
+    a:'Aldous',
+    b:'Balmond',
+    c:'Chou',
+    d:'Diggie',
+    e:'Estes',
+    f:'Fanny',
+    g:'Gusion',
+    h:'Harley',
+    i:'Irithel',
+    j:'Johnson',
+    k:'Kagura',
+    l:'Layla',
+    m:'Miya',
+    n:'Nana',
+    o:'Odette',
+    p:'Pharsa',
+    r:'Ruby',
+    s:'Sun',
+    t:'Tigreal',
+    u:'Uranus',
+    v:'Vale',
+    w:'Wanwan',
+    x:'XBorg',
+    y:'Yve',
+    z:'Zhask',
+  }
+
   let heroObjects = {};
  
 
@@ -330,7 +359,8 @@ function getMatchingCharacter(image) {
   // console.log(image);
   const id = open ? "simple-popover" : undefined;
  const getName=(name)=>{
-  return name.split('/').at(-1).split('.').at(0); // this.png
+  return getname[name];
+  // return name.split('/').at(-1).split('.').at(0); // this.png
  }
   return (
     <div className="h-[40rem] flex flex-col justify-evenly items-center px-4">
@@ -347,7 +377,7 @@ function getMatchingCharacter(image) {
               style={{borderRadius:'10px'}}
           />
           {/* <p>{arrObj.find((elem)=> elem.src == image).name}</p> */}
-          {getName(obj1[elem.toLowerCase().split('/')])}
+          {getName(elem)}
           </div>
       )  
       ))}
