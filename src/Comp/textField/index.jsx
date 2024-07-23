@@ -415,7 +415,7 @@ export function PlaceholdersAndVanishInputDemo() {
         )}
       </div>
       <h2 className="text-xl text-center sm:text-4xl dark:text-white text-black">
-        ✨ Enter Your Name and Press Enter to Witness the Magic! 🪄
+        ✨ Enter Your Name and Press Enter to Witness the Magic! 
       </h2>
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
