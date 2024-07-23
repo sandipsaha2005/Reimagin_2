@@ -12,9 +12,10 @@ const OpeningSequence = () => {
   return (
     <div className="container">
       <div className="os-phrases" id="os-phrases">
-        <h2>Wait...something is </h2>
-        <h2>waiting for you...</h2>
-        <h2>Prepare for the ultimate clash!</h2>
+        {/* <h2>Wait...something is </h2> */}
+        <h2>Something awaits...</h2>
+        <h2>Get ready...</h2>
+        <h2>For the ultimate clash! </h2>
       </div>
     </div>
   );

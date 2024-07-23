@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useState } from "react";
 import {
   motion,
   useScroll,
@@ -7,7 +8,10 @@ import {
   useSpring,
 } from "framer-motion";
 import { Image } from "lucide-react";
-
+import AnimatedSubscribeButton from '../downloadButton/ui'
+import { CheckIcon, ChevronRightIcon } from "lucide-react";
+import { FaApple } from "react-icons/fa";
+import { DiAndroid } from "react-icons/di";
 
 export const HeroParallax = ({ products }) => {
   const firstRow = products.slice(0, 5);
@@ -94,14 +98,64 @@ export const HeroParallax = ({ products }) => {
 };
 
 export const Header = () => {
+
+  const [show,setShow]=useState(false);
+  const [show1,setShow1]=useState(false);
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
+    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 z-[100]">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
      <span className="text-[#C3A26C]"> Mobile Legends</span><br /> Where Legends are Born!
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
       Unleash your potential in 5v5 battles, master legendary heroes, and lead your team to glorious victory. Your legend starts here!
       </p>
+      <div className="flex gap-4 mt-5">
+      {show1 !== true && (
+              <div onClick={()=>setShow((prev)=>!prev)} className="border-2 border-[#C3A26C] rounded-md">
+            <AnimatedSubscribeButton
+              buttonColor="#000000"
+              buttonTextColor="#ffffff"
+              subscribeStatus={false}
+              initialText={
+                <span className="group inline-flex items-center">
+                  <FaApple className="mr-2 text-xl transition-transform duration-300 ease-in-out group-hover:scale-150" />
+                  Download{" "}
+                  <ChevronRightIcon className="ml-1 h-5 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              }
+              changeText={
+                <span className="group inline-flex items-center">
+                  <CheckIcon className="mr-2 h-4 w-4" />
+                  Complete{" "}
+                </span>
+              }
+            />
+            </div>
+            )}
+            
+            {show !== true && (
+              <div onClick={()=>setShow1((prev)=>!prev)}  className="border-2 border-[#C3A26C] rounded-md">
+            <AnimatedSubscribeButton
+              buttonColor="#000000"
+              buttonTextColor="#ffffff"
+              subscribeStatus={false}
+              initialText={
+                <span className="group inline-flex items-center">
+                  <DiAndroid className="mr-2 text-xl transition-transform duration-300 ease-in-out group-hover:scale-150" />
+                  Download{" "}
+                  <ChevronRightIcon className="ml-1 h-5 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              }
+              changeText={
+                <span className="group inline-flex items-center">
+                  <CheckIcon className="mr-2 h-4 w-4" />
+                  Complete{" "}
+                </span>
+              }
+            />
+            </div>
+            )}
+            </div>
     </div>
   );
 };

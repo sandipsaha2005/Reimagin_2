@@ -37,7 +37,7 @@ function App() {
     <>
       {/* {isPreLoading ? <PreLoader /> : <AppToRender/>}     */}
       <AppToRender/>
-
+{/*  */}
     </>
   )
 }

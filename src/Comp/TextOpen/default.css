@@ -52,3 +52,15 @@ a:hover {
 	float: left;
 	display: block;
 }
+
+@media (max-width: 768px) {
+	.os-phrases h2 {
+	  font-size: 1.5rem;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.os-phrases h2 {
+	  font-size: 1.2rem;
+	}
+  }

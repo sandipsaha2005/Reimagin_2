@@ -49,19 +49,19 @@ function NavbarDemo() {
     <div className="flex z-[1000] justify-end">
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>
+          <Button onClick={toggleDrawer(anchor, true)} >
             {" "}
             <WidgetsIcon
               className="icon"
               fontSize="large"
-              sx={{ color: "white" }}
+              sx={{ color:"#f2e8dc"}}
             />{" "}
           </Button>
           <Drawer
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
-            style={{backgroundColor:'black'}}
+            sx={{backgroundColor:'black'}}
           >
             <Button
               style={{
@@ -69,13 +69,14 @@ function NavbarDemo() {
                 justifyContent: "flex-end",
                 width: "100%",
                 paddingLeft: "20px",
+                backgroundColor:'#f0ab60'
               }}
             >
               <CloseIcon
                 fontSize="large"
                 onClick={toggleDrawer(anchor, false)}
                 sx={{
-                  "&:hover": { animation: `${rotate} 2s linear infinite` },
+                  "&:hover": { animation: `${rotate} 2s linear infinite` } ,color:"black",
                 }}
               />
             </Button>
