@@ -7,8 +7,8 @@ import { useAspect } from "@react-three/drei";
 function Footer() {
   const [activate1, setActivate1] = useState(0);
   const [activate2, setActivate2] = useState(0);
-  const [show,setShow]=useState(false);
-  const [show1,setShow1]=useState(false);
+  const [show, setShow] = useState(false);
+  const [show1, setShow1] = useState(false);
   return (
     <footer className="bg-zinc-900" id="footer">
       <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pt-24">
@@ -26,51 +26,50 @@ function Footer() {
           </p>
           <div className="flex items-center justify-center mt-3 gap-4">
             {show1 !== true && (
-              <div onClick={()=>setShow((prev)=>!prev)}>
-            <AnimatedSubscribeButton
-              buttonColor="#000000"
-              buttonTextColor="#ffffff"
-              subscribeStatus={false}
-              initialText={
-                <span className="group inline-flex items-center">
-                  <FaApple className="mr-2 text-xl transition-transform duration-300 ease-in-out group-hover:scale-150" />
-                  Download{" "}
-                  <ChevronRightIcon className="ml-1 h-5 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </span>
-              }
-              changeText={
-                <span className="group inline-flex items-center">
-                  <CheckIcon className="mr-2 h-4 w-4" />
-                  Complete{" "}
-                </span>
-              }
-            />
-            </div>
+              <div onClick={() => setShow((prev) => !prev)}>
+                <AnimatedSubscribeButton
+                  buttonColor="#000000"
+                  buttonTextColor="#ffffff"
+                  subscribeStatus={false}
+                  initialText={
+                    <span className="group inline-flex items-center">
+                      <FaApple className="mr-2 text-xl transition-transform duration-300 ease-in-out group-hover:scale-150" />
+                      Download{" "}
+                      <ChevronRightIcon className="ml-1 h-5 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    </span>
+                  }
+                  changeText={
+                    <span className="group inline-flex items-center">
+                      <CheckIcon className="mr-2 h-4 w-4" />
+                      Complete{" "}
+                    </span>
+                  }
+                />
+              </div>
             )}
-            
+
             {show !== true && (
-              <div onClick={()=>setShow1((prev)=>!prev)}>
-            <AnimatedSubscribeButton
-              buttonColor="#000000"
-              buttonTextColor="#ffffff"
-              subscribeStatus={false}
-              initialText={
-                <span className="group inline-flex items-center">
-                  <DiAndroid className="mr-2 text-xl transition-transform duration-300 ease-in-out group-hover:scale-150" />
-                  Download{" "}
-                  <ChevronRightIcon className="ml-1 h-5 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </span>
-              }
-              changeText={
-                <span className="group inline-flex items-center">
-                  <CheckIcon className="mr-2 h-4 w-4" />
-                  Complete{" "}
-                </span>
-              }
-            />
-            </div>
+              <div onClick={() => setShow1((prev) => !prev)}>
+                <AnimatedSubscribeButton
+                  buttonColor="#000000"
+                  buttonTextColor="#ffffff"
+                  subscribeStatus={false}
+                  initialText={
+                    <span className="group inline-flex items-center">
+                      <DiAndroid className="mr-2 text-xl transition-transform duration-300 ease-in-out group-hover:scale-150" />
+                      Download{" "}
+                      <ChevronRightIcon className="ml-1 h-5 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    </span>
+                  }
+                  changeText={
+                    <span className="group inline-flex items-center">
+                      <CheckIcon className="mr-2 h-4 w-4" />
+                      Complete{" "}
+                    </span>
+                  }
+                />
+              </div>
             )}
-            
           </div>
         </div>
 
@@ -78,7 +77,7 @@ function Footer() {
           <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
             <li>
               <a
-                href="#"
+                // href="#"
                 className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
               >
                 Terms & Conditions
@@ -87,7 +86,7 @@ function Footer() {
 
             <li>
               <a
-                href="#"
+                // href="#"
                 className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
               >
                 Privacy Policy
@@ -96,7 +95,7 @@ function Footer() {
 
             <li>
               <a
-                href="#"
+                // href="#"
                 className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
               >
                 Cookies
@@ -107,31 +106,28 @@ function Footer() {
           <ul className="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
             <li>
               <a
-                href="#"
+                // href=""
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
               >
                 <span className="sr-only">Facebook</span>
 
-                <svg
-                  className="h-6 w-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <lord-icon
+                  src="https://cdn.lordicon.com/iqagrlso.json"
+                  trigger="loop-on-hover"
+                  delay="2000"
+                  stroke="bold"
+                  state="hover-roll"
+                  colors="primary:#ffffff,secondary:#08a88a"
+                  style={{width:'25px',height:'25px'}}
+                ></lord-icon>
               </a>
             </li>
 
             <li>
               <a
-                href="#"
+                // href="#"
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
@@ -155,7 +151,7 @@ function Footer() {
 
             <li>
               <a
-                href="#"
+                // href="#"
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
@@ -175,7 +171,7 @@ function Footer() {
 
             <li>
               <a
-                href="#"
+                // href="#"
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
@@ -199,7 +195,7 @@ function Footer() {
 
             <li>
               <a
-                href="#"
+                // href="#"
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
