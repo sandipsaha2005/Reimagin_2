@@ -493,7 +493,7 @@ const GridComponent = () => {
           </div>
         </div>
         <h3 className="content__title content__title--right content__title--top">
-        Team Up, Fight On Win Big! 
+        Team Up, Fight On, Win Big! 
         </h3>
       </section>
       <section className="content content--spacing">
