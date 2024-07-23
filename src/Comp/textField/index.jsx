@@ -31,7 +31,12 @@ import Wanwan from './images/Wanwan.webp'
 import XBorg from './images/X.Borg.webp'
 import Yve from './images/Yve.webp'
 import Zhask from './images/Zhask.webp'
+import { ThreeDCardDemo } from "../threeDCard/index2";
+ 
 
+//src={item.image}
+//title={item.title}
+//desc={item.description}
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -92,10 +97,11 @@ export function PlaceholdersAndVanishInputDemo() {
 
   let arrObj=[
     {
-        src:Aldous,
-        name:'Aldous',
-        type:Herotype.f,
-        desc:'The guardian of the Minoan Maze.'
+        Aldous:{
+                name:'Aldous',
+                type:Herotype.f,
+                desc:'The guardian of the Minoan Maze.'
+              }, 
     },
     {
         src:Balmond,
@@ -319,12 +325,16 @@ function getMatchingCharacter(image) {
               alt={elem} 
               height='200px'
               width='100px'
+              style={{borderRadius:'10px'}}
           />
       )  
       ))}
       {image && (
-        <img src={image} alt="" height='200px'
-        width='100px'/>
+        <div className="flex justify-center gap-4">
+        <img src={image} alt="Image" height='300px'
+        width='200px' style={{borderRadius:'20px'}}/>
+        <p>{arrObj[0].Aldous.desc}</p>
+        </div>
       )}
       </div>
       <h2 className="mb-2 sm:mb-2 text-xl text-center sm:text-5xl dark:text-white text-black">

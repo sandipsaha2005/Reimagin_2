@@ -35,15 +35,11 @@ function AppToRender() {
   return (
     <>
       <NavbarDemo />
-      {/* <Sticky/> */}
-      {/* <GlobeDemo/> */}
-      {/* <TrailDemo/> */}
-      {/* <IconCloudDemo/> */}
-        {/* <Nav /> */}
+
        <HeroParallaxDemo />
        <ScrollBasedVelocityDemo />
        <MenuMain1 />
-  
+
        <TracingBeamDemo />
   
        <ScrollThreeD />

@@ -74,7 +74,7 @@ a:focus-visible {
   width: 100vw;
   height: calc(100vh - 13rem);
   position: relative;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .menu__item {
