@@ -35,8 +35,8 @@ function App() {
 
   return (
     <>
-      {/* {isPreLoading ? <PreLoader /> : <AppToRender/>}     */}
-      <AppToRender/>
+      {isPreLoading ? <PreLoader /> : <AppToRender/>}    
+      {/* <AppToRender/> */}
 
     </>
   )
