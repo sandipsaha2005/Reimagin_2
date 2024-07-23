@@ -76,7 +76,7 @@ function NavbarDemo() {
                 width: "100%",
                 paddingLeft: "25px",
                 paddingTop: "20px",
-                backgroundColor: "#f0ab60",
+                backgroundColor: "#f8c792",
               }}
               // onClick={toggleDrawer(anchor, false)}
             >
@@ -93,7 +93,7 @@ function NavbarDemo() {
                   trigger="loop-on-hover"
                   delay="100"
                   state="hover-cross-2"
-                  colors="primary:#ffffff"
+                  colors="primary:#000000"
                   style={{ width: "60px", height: "50px" }}
                   onClick={toggleDrawer(anchor, false)}
                   >

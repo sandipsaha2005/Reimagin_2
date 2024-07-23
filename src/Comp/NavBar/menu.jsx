@@ -40,7 +40,7 @@ const Menu = () => {
         name="VIDEOS"
         images={[
           "https://wallpapers.com/images/hd/mobile-legend-background-1kzamkmmm1t1f144.jpg",
-          "https://images.wallpapersden.com/image/download/mobile-legends-bang-bang-hd-cool_bW1paG2UmZqaraWkpJRmbmdlrWZlbWU.jpg",
+          "https://wallpapers.com/images/hd/alucard-with-mobile-legends-logo-e780n03vca6thx6d.jpg",
         ]}
       />
       <MenuItem

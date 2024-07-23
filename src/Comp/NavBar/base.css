@@ -10,16 +10,16 @@
 
 body {
   margin: 0;
-  --color-link: #FFD700; /* Rich gold for links */
-  --color-link-hover: #FFC107; /* Bright gold for hover */
-  --color-border: #3a2a02; /* Deep golden brown for borders */
-  --marquee-bg: #3f3f3f; /* Very dark gray for marquee background */
-  --marquee-text: #FFD700; /* Rich gold for marquee text */
+  /* --color-link: #FFD700; Rich gold for links */
+  /* --color-link-hover: #FFC107; Bright gold for hover */
+  --color-border: #ad9173; /* Deep golden brown for borders */
+  --marquee-bg: black; /* Very dark gray for marquee background */
+  --marquee-text: #edece3; /* Rich gold for marquee text */
   --menu-focus: #FFA500; /* Bright gold for menu focus */
   --color-text: #E5E5E5; /* Light gray for text */
   --color-bg: #09090b; /* Very dark background */
   color: var(--color-text);
-  background-color: var(--color-bg);
+  /* background-color: var(--color-bg); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

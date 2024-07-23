@@ -46,8 +46,6 @@ export function ExpandableCardDemo1() {
     },
     hover: {
       scale: 1.4,
-      
-    
     },
     tap: {
       scale: 0.95,
@@ -160,7 +158,7 @@ export function ExpandableCardDemo1() {
               ) : (
                 <>
                   <motion.div
-                    className="flex justify-center gap-x-10 items-center"
+                    className="flex justify-center gap-x-10 items-center z-[20000]"
                     // layoutId={`image-${active.title}-${id}`}
                   >
                     <DirectionAwareHover imageUrl={"https://akmweb.youngjoygame.com/web/gms/image/b7b6ffb72c0899360852091605c5161f.jpg"}>
