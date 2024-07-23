@@ -16,10 +16,10 @@ export const GoogleGeminiEffect = ({
 }) => {
     return (
         <div className={cn("sticky top-40 mt-20", className)}>
-          <p className="text-lg uppercase font-[steelar] md:text-6xl font-normal pb-8 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
+          <p className="text-lg uppercase font-[steelar] md:text-6xl font-normal pb-8 text-center bg-clip-text text-transparent bg-gradient-to-b from-[#FFCC00] to-neutral-300">
             {title || `The 7 Kingdom`}
           </p>
-          <p className="text-xs md:text-lg font-normal text-center text-neutral-400 max-w-lg mx-auto">
+          <p className="text-xs md:text-lg font-normal text-center text-neutral-200 max-w-lg mx-auto">
             {description ||
               `Conquer the kingdom with Mobile Legends: Bang Bang—where legendary heroes and epic battles define your fate!`}
           </p>

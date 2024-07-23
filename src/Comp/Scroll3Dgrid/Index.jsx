@@ -461,7 +461,7 @@ const GridComponent = () => {
 
           </div>
         </div>
-        <h3 className="content__title content__title--right content__title--top">
+        <h3 className="content__title content__title--right content__title--top bg-clip-text text-transparent bg-gradient-to-b from-[#FFCC00]  to-neutral-300">
           Command Your Hero's <br />Dominate the Arena!
         </h3>
         
@@ -492,7 +492,7 @@ const GridComponent = () => {
           ))}
           </div>
         </div>
-        <h3 className="content__title content__title--right content__title--top">
+        <h3 className="content__title content__title--right content__title--top bg-clip-text text-transparent bg-gradient-to-b from-[#FFCC00] to-neutral-300">
         Team Up, Fight On, Win Big! 
         </h3>
       </section>
@@ -507,7 +507,7 @@ const GridComponent = () => {
           ))}
           </div>
         </div>
-        <h3 className="content__title content__title--right">
+        <h3 className="content__title content__title--right bg-clip-text text-transparent bg-gradient-to-b from-[#FFCC00] to-neutral-300">
         Forge Your Legacy <br />in Every Battle! 
         </h3>
         <br />
@@ -523,7 +523,7 @@ const GridComponent = () => {
           ))}
           </div>
         </div>
-        <h3 className="content__title content__title--right">
+        <h3 className="content__title content__title--right bg-clip-text text-transparent bg-gradient-to-b from-[#FFCC00] to-neutral-300">
         The Ultimate <br /> Mobile Battle Experience! 
         </h3>
       </section>

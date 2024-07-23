@@ -104,7 +104,7 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-30 px-4 w-full left-0 top-0 ">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-     <span className="text-[#C3A26C]"> Mobile Legends</span><br /> Where Legends are Born!
+     <span className="bg-clip-text text-transparent bg-gradient-to-b from-[#FFCC00] to-neutral-300"> Mobile Legends</span><br /> Where Legends are Born!
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
       Unleash your potential in 5v5 battles, master legendary heroes, and lead your team to glorious victory. Your legend starts here!

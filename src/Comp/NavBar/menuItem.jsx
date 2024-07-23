@@ -64,7 +64,7 @@ const MenuItem = ({ name, images }) => {
           <div className="marquee__inner" aria-hidden="true" ref={marqueeInnerRef}>
             {images.map((img, index) => (
               <React.Fragment key={index}>
-                <span>{name}</span>
+                <span >{name}</span>
                 <div className="marquee__img" style={{ backgroundImage: `url(${img})` }}></div>
               </React.Fragment>
             ))}

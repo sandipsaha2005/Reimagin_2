@@ -330,8 +330,9 @@ body #cdawrap {
 	place-items: center;
 	text-align: center;
 	font-weight: 300;
-	font-size: clamp(1.5rem, 15vw, 6.5rem);
+	font-size: clamp(1.5rem, 15rem, 5.5rem);
 }
+
 
 .content__title--top {
 	align-items: start;
