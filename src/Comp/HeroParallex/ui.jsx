@@ -102,7 +102,7 @@ export const Header = () => {
   const [show,setShow]=useState(false);
   const [show1,setShow1]=useState(false);
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 z-[100]">
+    <div className="max-w-7xl relative mx-auto py-20 md:py-30 px-4 w-full left-0 top-0 ">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
      <span className="text-[#C3A26C]"> Mobile Legends</span><br /> Where Legends are Born!
       </h1>
@@ -111,7 +111,7 @@ export const Header = () => {
       </p>
       <div className="flex gap-4 mt-5">
       {show1 !== true && (
-              <div onClick={()=>setShow((prev)=>!prev)} className="border-2 border-[#C3A26C] rounded-md">
+              <div onClick={()=>setShow((prev)=>!prev)} className="border-2 border-[#C3A26C] rounded-md z-[1000]">
             <AnimatedSubscribeButton
               buttonColor="#000000"
               buttonTextColor="#ffffff"
@@ -134,7 +134,7 @@ export const Header = () => {
             )}
             
             {show !== true && (
-              <div onClick={()=>setShow1((prev)=>!prev)}  className="border-2 border-[#C3A26C] rounded-md">
+              <div onClick={()=>setShow1((prev)=>!prev)}  className="border-2 border-[#C3A26C] rounded-md z-[1000]">
             <AnimatedSubscribeButton
               buttonColor="#000000"
               buttonTextColor="#ffffff"

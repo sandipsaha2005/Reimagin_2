@@ -46,39 +46,58 @@ function NavbarDemo() {
     setState({ ...state, [anchor]: open });
   };
   return (
-    <div className="flex z-[1000] justify-end">
+    <div className="z-[1000]  fixed top-5 right-5">
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)} >
+          <Button onClick={toggleDrawer(anchor, true)}>
             {" "}
-            <WidgetsIcon
+            <lord-icon
+              src="https://cdn.lordicon.com/eouimtlu.json"
+              trigger="loop-on-hover"
+              colors="primary:#f2e8dc"
+              style={{ width: "50px", height: "40px" }}
+            ></lord-icon>{" "}
+            {/* <WidgetsIcon
               className="icon"
               fontSize="large"
-              sx={{ color:"#f2e8dc"}}
-            />{" "}
+              sx={{ color: "#f2e8dc" }}
+            />{" "} */}
           </Button>
           <Drawer
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
-            sx={{backgroundColor:'black'}}
+            sx={{ backgroundColor: "black" }}
           >
             <Button
               style={{
                 display: "flex",
                 justifyContent: "flex-end",
                 width: "100%",
-                paddingLeft: "20px",
-                backgroundColor:'#f0ab60'
+                paddingLeft: "25px",
+                paddingTop: "20px",
+                backgroundColor: "#f0ab60",
               }}
+              // onClick={toggleDrawer(anchor, false)}
             >
-              <CloseIcon
+              {/* <CloseIcon
                 fontSize="large"
                 onClick={toggleDrawer(anchor, false)}
                 sx={{
-                  "&:hover": { animation: `${rotate} 2s linear infinite` } ,color:"black",
+                  "&:hover": { animation: `${rotate} 2s linear infinite` },
+                  color: "black",
                 }}
-              />
+              /> */}
+              <lord-icon
+                  src="https://cdn.lordicon.com/nqtddedc.json"
+                  trigger="loop-on-hover"
+                  delay="100"
+                  state="hover-cross-2"
+                  colors="primary:#ffffff"
+                  style={{ width: "60px", height: "50px" }}
+                  onClick={toggleDrawer(anchor, false)}
+                  >
+              </lord-icon>
             </Button>
             <Nav />
           </Drawer>
