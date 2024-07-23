@@ -49,8 +49,8 @@ function AppToRender() {
        <ScrollThreeD />
        <MarqueeDemo />
        <MenuMain /> 
-       <Footer />  
       <PlaceholdersAndVanishInputDemo/>
+       <Footer />  
     </>
   );
 }

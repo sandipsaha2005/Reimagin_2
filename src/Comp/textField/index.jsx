@@ -305,7 +305,7 @@ function getMatchingCharacter(image) {
     // setIsPopupOpen(true);
     console.log("submitted");
   };
-  console.log(image);
+  // console.log(image);
   const id = open ? "simple-popover" : undefined;
 
   return (
