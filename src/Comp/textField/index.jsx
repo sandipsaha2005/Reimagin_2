@@ -94,14 +94,16 @@ export function PlaceholdersAndVanishInputDemo() {
     y:Yve,
     z:Zhask,
   }
+  let heroObjects = {};
+ 
+
 
   let arrObj=[
     {
-        Aldous:{
-                name:'Aldous',
-                type:Herotype.f,
-                desc:'The guardian of the Minoan Maze.'
-              }, 
+      src: Aldous,
+      name: 'Aldous',
+      type: Herotype.f,
+      desc: 'The guardian of the Minoan Maze.'
     },
     {
         src:Balmond,
@@ -256,6 +258,16 @@ export function PlaceholdersAndVanishInputDemo() {
     
 ]
 
+arrObj.forEach(hero => {
+  heroObjects[hero.name] = {
+    name: hero.name,
+    type: hero.type,
+    desc: hero.desc
+  };
+});
+
+console.log(heroObjects.Aldous);
+
 function getMatchingCharacter(image) {
   let result = [];
 
@@ -305,10 +317,9 @@ function getMatchingCharacter(image) {
     let letters=state;
     setState('')
     let matchingCharacters = getMatchingCharacter(letters);
-    // console.log(matchingCharacters[0]);
+
     setImage(matchingCharacters[0])
-    // console.log(letters);
-    // setIsPopupOpen(true);
+
     console.log("submitted");
   };
   // console.log(image);
@@ -333,7 +344,16 @@ function getMatchingCharacter(image) {
         <div className="flex justify-center gap-4">
         <img src={image} alt="Image" height='300px'
         width='200px' style={{borderRadius:'20px'}}/>
-        <p>{arrObj[0].Aldous.desc}</p>
+        {/* <p>{heroObjects.image.name}</p> */}
+        <div className="w-32">
+        <p>{arrObj.find((elem)=> elem.src == image).name}</p>
+        <br />
+        <hr />
+        <p>{arrObj.find((elem)=> elem.src == image).type}</p>
+        <br />
+        <hr />
+        <p className="wrap">{arrObj.find((elem)=> elem.src == image).desc}</p>
+        </div>
         </div>
       )}
       </div>
